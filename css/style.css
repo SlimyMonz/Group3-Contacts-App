@@ -61,22 +61,35 @@ table.table_head{
 }
 
 #add_contact_form{
+    z-index: 1;
     display: none;
     position: absolute;
     width: 50%;
-    margin-top: 5%;
+    margin-top: -3%;
     margin-left: 25%;
     margin-right: 25%;
     background-color: white;
     padding: 5%;
     text-align: center;
     border-style: solid; 
-    border-color: #BE6E46;
+    border-color: black;
     border-width: 3px;
+}
+
+#add_contact_form h1{
+    background-color: #BE6E46;
+    border-radius: 10px;
+    padding: 2%;
 }
 
 #static_body{
     opacity: 1;
+}
+
+.form_fields{
+    display: inline;
+    text-align: left;
+    padding: 2%;
 }
 
 .alphabet_display{

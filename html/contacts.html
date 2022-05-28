@@ -17,9 +17,7 @@
                 
             }, false);
         </script>
-        <script src="/js/app.js"></script>
-        <script src="/js/add_contact_script.js"></script>
-           
+        <script src="/js/app.js"></script>          
            
     </head>
 
@@ -29,20 +27,24 @@
 
             <!-- Add Contact Form Here -->
 
-            <div id="add_contact_form" style="opacity: 1;">
+            <div id="add_contact_form">
 
                 <h1>Add New Contact</h1>
-                <p>Name</p>
-                <input type="text" placeholder="Name">
-                <p>Phone Number</p>
-                <input type="text" placeholder="Phone Number">
-                <p>E-mail</p>
-                <input type="text" placeholder="E-mail">
-
-                <div id="form_Buttons">
-                    <button onclick="submit_form_data()">Submit</button>
-                    <button onclick="close_add_box()">Cancel</button>
+                
+                <div class="form_fields">
+                    <p>Name</p>
+                    <input type="text" placeholder="Name">
+                    <p>Phone Number</p>
+                    <input type="text" placeholder="Phone Number">
+                    <p>E-mail</p>
+                    <input type="text" placeholder="E-mail">
+    
+                    <div id="form_Buttons">
+                        <button onclick="submit_form_data()">Submit</button>
+                        <button onclick="close_add_box()">Cancel</button>
+                    </div>
                 </div>
+                
             </div>
 
         </div>
