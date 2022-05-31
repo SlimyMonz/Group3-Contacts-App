@@ -7,14 +7,25 @@ function showAlert() {
 function show_add_contact(){
   
   var static_body = document.getElementById("static_body");
-  static_body.style = "opacity: .33;";
+  static_body.style = "opacity: .33;"
 
   var add_contact_form = document.getElementById("add_contact_form");
   add_contact_form.style = "display: block;"
+
+  // static_body_click_behavior();
 }
+
+function static_body_click_behavior(){
+  var static_body = document.getElementById("static_body");
+  // static_body.onclick = close_add_box();
+}
+
 
 function submit_form_data(){
   close_add_box();
+  // var static_body = document.getElementById("static_body");
+  // static_body.onclick = "";
+
 }
 
 // close pop up menu. right now this is more of a cancel than a submit
