@@ -78,7 +78,7 @@ function readCookie()
 	userId = -1;
 	let data = document.cookie;
 	let splits = data.split(",");
-	for(var i = 0; i < splits.length; i++) 
+	for(let i = 0; i < splits.length; i++)
 	{
 		let thisOne = splits[i].trim();
 		let tokens = thisOne.split("=");
@@ -115,15 +115,24 @@ function doLogout()
 	window.location.href = "index.html";
 }
 
-function addColor()
+// removed addColor()
+
+function addContact() 
 {
-	let newColor = document.getElementById("colorText").value;
-	document.getElementById("colorAddResult").innerHTML = "";
+	let contactName = $("#name").val();
+	let contactPhone = $("#phone").val();
+	let contactEmail = $("#email").val();
 
-	let tmp = {color:newColor,userId,userId};
-	let jsonPayload = JSON.stringify( tmp );
+	let newContact = {
+		name: contactName,
+		phone: contactPhone,
+		email: contactEmail,
+		userId: userId
+	};
 
-	let url = urlBase + '/AddColor.' + extension;
+	let jsonPayload = JSON.stringify( newContact );
+
+	let url = urlBase + '/Add.' + extension;
 	
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
@@ -134,16 +143,25 @@ function addColor()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				document.getElementById("colorAddResult").innerHTML = "Color has been added";
+				//document.getElementById("colorAddResult").innerHTML = "Color has been added";
 			}
 		};
 		xhr.send(jsonPayload);
 	}
 	catch(err)
 	{
-		document.getElementById("colorAddResult").innerHTML = err.message;
+		//document.getElementById("colorAddResult").innerHTML = err.message;
 	}
-	
+}
+
+function deleteContact() {
+	//grab contact ID and save to an object
+
+	//JSON.stringify(object)
+
+	//create url to POST to
+
+	//
 }
 
 function searchColor()

@@ -6,15 +6,12 @@
     $firstName = "";
     $lastName = "";
 
-
-    // this is to prevent github from uploading the password
-    $pass_file = fopen("pass", "r");
-    $server_pass = fgets($pass_file);
-    fclose($pass_file);
-
+    $config = parse_ini_file('config.ini');
 
     # server, user, pass, database
-    $conn = new mysqli("localhost", "Admin", $server_pass, "COP4331");
+    $conn = new mysqli($config['hostname'], $config['username'], $config['password'], $config['database']);
+
+
     if ($conn->connect_error) {
         returnWithError($conn->connect_error);
     } else {

@@ -8,8 +8,8 @@
 	}
 	else
 	{
-        $stmt = $conn->prepare("INSERT into Users (FirstName, LastName, Login, Password) VALUES(?,?,?,?)");
-		$stmt->bind_param("ssss", $inData["firstName"], $inData["lastName"], $inData["login"], $inData["password"]);
+        $stmt = $conn->prepare("UPDATE Contacts SET Phone=?, Email=? WHERE Name=? AND UserID=?");
+		$stmt->bind_param("ssss", $inData["newPhone"], $inData["newEmail"], $inData["name"], $inData["userId"]);
 		$stmt->execute();
         $stmt->close();
 		$conn->close();
