@@ -22,6 +22,7 @@ function static_body_click_behavior(){
 
 
 function submit_form_data(){
+  addContact();
   close_add_box();
   // var static_body = document.getElementById("static_body");
   // static_body.onclick = "";
