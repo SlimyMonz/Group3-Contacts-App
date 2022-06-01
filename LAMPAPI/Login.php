@@ -6,11 +6,10 @@
     $firstName = "";
     $lastName = "";
 
+    # config file contains all values needed
     $config = parse_ini_file('config.ini');
-
     # server, user, pass, database
     $conn = new mysqli($config['hostname'], $config['username'], $config['password'], $config['database']);
-
 
     if ($conn->connect_error) {
         returnWithError($conn->connect_error);
