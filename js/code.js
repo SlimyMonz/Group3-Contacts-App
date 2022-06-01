@@ -153,6 +153,46 @@ function addContact()
 		//document.getElementById("colorAddResult").innerHTML = err.message;
 	}
 }
+function doRegister() 
+{
+	
+	let contactfirstName = $("#first_name").val();
+	let contactlastName = $("#last_name").val();
+	let contactLogin = $("#reg_login").val();
+	let contactPassword = $("#reg_password").val();
+
+	let newUser = {
+		
+		firstName: contactfirstName,
+		lastName: contactlastName,
+		login: contactLogin,
+		password: contactPassword
+
+	};
+
+	let jsonPayload = JSON.stringify( newUser );
+
+	let url = urlBase + '/Register.' + extension;
+	
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				//document.getElementById("colorAddResult").innerHTML = "Color has been added";
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		//document.getElementById("colorAddResult").innerHTML = err.message;
+	}
+}
 
 function deleteContact() {
 	//grab contact ID and save to an object
