@@ -49,7 +49,7 @@
                                     <div class="form-group">
                                         <label for="exampleInputIcon3">Username</label>
                                         <div class="input-group mb-4">
-                                            <input class="form-control" id="usah" placeholder="username" type="text" aria-label="username">
+                                            <input class="form-control" id="loginName" placeholder="username" type="text" aria-label="username">
                                         </div>
                                     </div>
                                     <!-- End of Form -->
@@ -58,7 +58,7 @@
                                         <div class="form-group">
                                             <label for="exampleInputPassword6">Password</label>
                                             <div class="input-group mb-4">
-                                                <input class="form-control" id="exampleInputPassword6" placeholder="password" type="password" aria-label="Password" required>
+                                                <input class="form-control" id="loginPassword" placeholder="password" type="password" aria-label="Password" required>
                                             </div>
                                             <button type="submit" class="btn btn-primary w-100" onclick="doLogin();">Sign in</button>
                                              <span id="loginResult"></span>
@@ -88,12 +88,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body bg-green">
-                <input type="text" id="name" onfocus="this.value=''" value="Name">
+                <input type="text" id="user_name" onfocus="this.value=''" value="Name">
                 <input type="text" id="reg_password" onfocus="this.value=''" value="Pass">
                 </div>
                 <div class="modal-footer bg-pink border-dark">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" >Save changes</button>
+                <button type="button" class="btn btn-primary" onclick="testo();" >Register</button>
                 </div>
             </div>
             </div>
