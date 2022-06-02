@@ -53,6 +53,5 @@ function testo()
     alert("srz biz");
 }
 
-modal.resizable();
 
 
