@@ -1,15 +1,9 @@
 // search function
 
-const urlBase = 'http://group3.rocks/LAMPAPI';
-const extension = 'php';
-
-let userId = 0;
-
 function doSearch()
 {
     let srch = document.getElementById("search_bar").value;
     document.getElementById("contact_display_box").innerHTML = "";
-
 
     let contactList = "";
 

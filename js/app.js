@@ -1,13 +1,20 @@
 // general app functions
 
+const urlBase = 'http://group3.rocks/LAMPAPI';
+const extension = 'php';
+
+let userId = 0;
+let firstName = "";
+let lastName = "";
+
 function showAlert() {
     var myText = "Did you think there would be somthing here?";
     alert (myText);
 }
 
 // open pop-up menu for add contact
-function show_add_contact(){
-  
+function show_add_contact()
+{
   var static_body = document.getElementById("static_body");
   static_body.style = "opacity: .33;"
 
@@ -17,18 +24,11 @@ function show_add_contact(){
   // static_body_click_behavior();
 }
 
-function static_body_click_behavior(){
-  var static_body = document.getElementById("static_body");
-  // static_body.onclick = close_add_box();
-}
-
-
 function submit_form_data(){
   addContact();
   close_add_box();
   // var static_body = document.getElementById("static_body");
   // static_body.onclick = "";
-
 }
 
 // close pop up menu. right now this is more of a cancel than a submit
