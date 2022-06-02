@@ -27,7 +27,9 @@ function doSearch()
                 document.getElementById("contact_display_box").innerHTML = "Contact(s) has been retrieved";
                 let jsonObject = JSON.parse( xhr.responseText );
 
-                for( let i=0; i<jsonObject.results.length; i++ )
+                // this shit don't work lmao
+                /*
+                for( let i=0; i<jsonObject.length; i++ )
                 {
                     contactList += jsonObject.results[i];
                     if( i < jsonObject.results.length - 1 )
@@ -35,6 +37,7 @@ function doSearch()
                         contactList += "<br />\r\n";
                     }
                 }
+                 */
 
                 document.getElementsByTagName("p")[0].innerHTML = contactList; //if not working try [3] instead of [0]
 
