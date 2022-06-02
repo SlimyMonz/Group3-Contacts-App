@@ -8,7 +8,7 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: #A3BFA8;
+    background-color:  #18634B;
 }
 
 table{
@@ -33,8 +33,8 @@ table.table_head{
     padding-bottom: 30px;
     top: 0%;
     left: 0%;
-    background-color: #A3BFA8 ;
-    border-color: #59594A;
+    background-color:  #18634B;
+    border-color: #0e0e0c;
     border-width: 100px;
     
 }

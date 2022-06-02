@@ -21,6 +21,7 @@
     <link type="text/css" href="css/custom.css" rel="stylesheet">
     
     <script type="text/javascript" src="js/code.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/modal.js"></script>
     <script>drag();</script> <!--makes modal draggable-->
     
@@ -43,7 +44,7 @@
                                     <div class="form-group">
                                         <label for="loginName">Username</label>
                                         <div class="input-group mb-4">
-                                            <input class="form-control" id="loginName" placeholder="username" type="text" aria-label="username">
+                                            <input class="form-control" id="loginName" placeholder="" type="text" aria-label="username">
                                         </div>
                                     </div>
                                     <!-- End of Form -->
@@ -52,7 +53,7 @@
                                         <div class="form-group">
                                             <label for="loginPassword">Password</label>
                                             <div class="input-group mb-4">
-                                                <input class="form-control" id="loginPassword" placeholder="password" type="password" aria-label="Password" required>
+                                                <input class="form-control" id="loginPassword" placeholder="" type="password" aria-label="Password" required>
                                             </div>
                                             <button type="button" class="btn btn-primary w-100" onclick="doLogin();">Sign in</button>
                                              <span id="loginResult"></span>
@@ -65,7 +66,7 @@
                                 <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
                                     <span class="font-weight-normal" id="register">
                                         Not registered?
-                                        <button type="button" class="btn btn-link font-weight-bold" id="createAccount" data-bs-target="#exampleModal" data-bs-toggle="modal" > Create account</button>
+                                        <button type="button" class="btn btn-link font-weight-bold d-block-append" id="createAccount" data-bs-target="#exampleModal" data-bs-toggle="modal" > Create account</button>
                                     </span>
                                 </div>
                             </div>
@@ -84,15 +85,15 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body bg-green">
-                <input type="text" id="first_name" onfocus="this.value=''" value="First Name">
-                <input type="text" id="last_name" onfocus="this.value=''" value="Last Name">
-                <input type="text" id="reg_login" onfocus="this.value=''" value="Login">
-                <input type="text" id="reg_password" onfocus="this.value=''" value="Password">
+                <input type="text" class = "form-control w-50" id="first_name" onfocus="this.value=''" value="First Name">
+                <input type="text" class = "form-control w-50" id="last_name" onfocus="this.value=''" value="Last Name">
+                <input type="text" class = "form-control w-50" id="reg_login" onfocus="this.value=''" value="Login">
+                <input type="text" class = "form-control w-50" id="reg_password" onfocus="this.value=''" value="Password">
 
                 </div>
                 <div class="modal-footer bg-pink border-dark">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="doRegister();" >Register</button>
+                <button type="button" class="btn btn-primary" onclick="doRegister();" data-bs-dismiss="modal" >Register</button>
                 </div>
             </div>
             </div>

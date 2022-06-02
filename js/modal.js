@@ -8,6 +8,32 @@ function drag()
     } 
     );
     
+    $( function() 
+    {
+        $("#exampleModal").on("hidden.bs.modal", function() 
+        {
+            //alert("nothin");
+            
+            clear();
+            
+            
+        });
+    });
+
+    $( function() 
+    {
+        $("#exampleModal").on("show.bs.modal", function() 
+        {
+            //alert("yessem");
+            $("#first_name").val("First Name");
+            $("#last_name").val("Last Name");
+            $("#reg_login").val("Login");
+            $("#reg_password").val("Password");
+            
+        });
+    });
+    
+
 }
 function spinnerOn()
 {

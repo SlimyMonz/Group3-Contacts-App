@@ -36,5 +36,10 @@ function close_add_box(){
   add_contact_form.style = "display: none;";
   static_body.style = "opacity: 1;";
 }
-
-
+function clear()
+{
+  $("#first_name").val("");
+  $("#last_name").val("");
+  $("#reg_login").val("");
+  $("#reg_password").val("");
+}
