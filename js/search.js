@@ -23,7 +23,6 @@ function doSearch()
     try {
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("contact_display_box").innerHTML = "Contact(s) has been retrieved";
                 console.log(xhr.responseText + "bruh mmnt extravaganza");
                 var jsObjectArr = JSON.parse(xhr.responseText);
 
@@ -45,9 +44,12 @@ function doSearch()
 }
 
 function display_contacts(contactList){
-    var my_table = Document.getElementById("contact_display_box");
+    console.log("made it here");
+    var my_table = document.getElementById("contact_display_box");
     var itter = 0;
+    console.log("there should be " + contactList.length + "rows");
     for(let i in contactList){
+       
         var my_row = my_table.insertRow(itter);
         var cell_one = my_row.insertCell(0);
         var cell_two = my_row.insertCell(1);
@@ -59,7 +61,8 @@ function display_contacts(contactList){
         cell_two.innerHTML = "phone goes here";
         cell_three.innerHTML = "email goes here";
         cell_four.innerHTML = "<button id=\"table_edit\"> Edit </button>";
-        cell_five.innerHTML = "<button id=\"table_delete\"> Edit </button>";
+        cell_five.innerHTML = "<button id=\"table_delete\"> Delete </button>";
+        console.log("itter: " +itter + " ");
 
     }
     
