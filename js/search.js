@@ -25,22 +25,17 @@ function doSearch()
             if (this.readyState == 4 && this.status == 200)
             {
                 document.getElementById("contact_display_box").innerHTML = "Contact(s) has been retrieved";
-                let jsonObject = JSON.parse( xhr.responseText );
+		console.log( xhr.responseText + "bruh mmnt extravaganza");
+                var  jsObjectArr = JSON.parse(xhr.responseText);
 
-                console.log(jsonObject.results);
 
-                for( let i=0; i<jsonObject.results.length; i++ )
+                for( let i in jsObjectArr )
                 {
-                    contactList += jsonObject.results[i];
-
-                    if( i < jsonObject.results.length - 1 )
-                    {
-                        contactList += "<br />\r\n";
-                    }
+		    console.log(jsObjectArr[i]);
+                    contactList += jsObjectArr[i];
                 }
 
-                document.getElementsByTagName("p")[0].innerHTML = contactList; //if not working try [3] instead of [0]
-
+                document.getElementById("contact_display_box").innerHTML = contactList; 
                 alert(contactList); //this is for testing if the search actually works even if we can't display it
             }
         };
