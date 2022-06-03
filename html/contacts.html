@@ -15,13 +15,12 @@
         <script src="/js/login.js"></script>
         <script src="/js/modal.js"></script>
         <script src="/js/search.js"></script>
-        <script>drag();</script> <!--makes modal draggable-->
+        <script>drag();</script>
     
 
         <!-- <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', function() {
                 readCookie();
-                
             }, false);
         </script> -->
 
@@ -49,6 +48,9 @@
         <h2>Contacts</h2>
         <div>
             <p> Search Results get displayed here <i>someday</i></p>
+            <div id ="contact_display_box">
+                <p></p>
+            </div>
         </div>
 
         <!-- Modals -->
@@ -60,14 +62,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body bg-green">
-                <input type="text" class = "form-control w-50" id="Name" onfocus="this.value=''" value="Name">
-                <input type="text" class = "form-control w-50" id="E-mail" onfocus="this.value=''" value="E-Mail">
-                <input type="text" class = "form-control w-50" id="Phone" onfocus="this.value=''" value="Phone">
+                <input type="text" class = "form-control w-50" id="name" onfocus="this.value=''" value="Name">
+                <input type="text" class = "form-control w-50" id="email" onfocus="this.value=''" value="E-Mail">
+                <input type="text" class = "form-control w-50" id="phone" onfocus="this.value=''" value="Phone">
 
                 </div>
                 <div class="modal-footer bg-pink border-dark">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="add_contact();" data-bs-dismiss="modal" >Register</button>
+                <button type="button" class="btn btn-primary" onclick="addContact();" data-bs-dismiss="modal" >Add Contact</button>
                 </div>
             </div>
             </div>

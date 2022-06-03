@@ -28,15 +28,16 @@ function doSearch()
                 let jsonObject = JSON.parse( xhr.responseText );
 
                 console.log(jsonObject.results);
-                for( let i=0; i<jsonObject.length; i++ )
+
+                for( let i=0; i<jsonObject.results.length; i++ )
                 {
                     contactList += jsonObject.results[i];
+
                     if( i < jsonObject.results.length - 1 )
                     {
                         contactList += "<br />\r\n";
                     }
                 }
-              
 
                 document.getElementsByTagName("p")[0].innerHTML = contactList; //if not working try [3] instead of [0]
 
