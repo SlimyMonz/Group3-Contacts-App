@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>User Home</title>
-        <link rel="stylesheet" href="/css/style.css">
+        <!-- <link rel="stylesheet" href="/css/style.css"> -->
         <link type="text/css" href="/css/custom.css" rel="stylesheet">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap');
@@ -41,69 +41,36 @@
 
     <body>
 
-        <div id="protected_popups">
-
-            <!-- Add Contact Form Here -->
-
-            <div id="add_contact_form">
-
-                <h1>Add New Contact</h1>
-                
-                <div class="form_fields">
-                    <p>Name</p>
-                    <input id="name" type="text" placeholder="Name">
-                    <p>Phone Number</p>
-                    <input id="phone" type="text" placeholder="Phone Number">
-                    <p>E-mail</p>
-                    <input id="email" type="text" placeholder="E-mail">
-    
-                    <div id="form_Buttons">
-                        <button onclick="submit_form_data()">Add</button> <!-- fyi addContact is referenced in submit_form_data-->
-                        <button onclick="close_add_box()">Cancel</button>
-                    </div>
-                </div>
-                
-            </div>
-
+        <div id="navbar" >
+            <h1 class="h4" id="logo" style="display: inline;">Monster Contacts</h1>
+            <br>
+            <form class="my-2 my-lg-0 form-group">
+                <input class="form-control mr-sm-2 w-50 input-group"  id="search_bar" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" id="search_btn" type="button" onclick="doSearch();" >Search</button>
+            </form>
         </div>
 
-        <div id="static_body">
-            
-            <div id= "navbar">
-                <h1 style="display: inline;"  class="h4" id="logo">Monster Contacts</h1>
-                <br>
-                <button class= "navbutton" onclick="show_add_contact()">Add Contact</button>
-                <button class= "navbutton" onclick="showAlert()">User settings</button>
-                <form class="my-2 my-lg-0 form-group">
-                    <input class="form-control mr-sm-2 w-50 input-group"  id="search_bar" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-primary my-2 my-sm-0" id="search_btn" type="button" onclick="doSearch();">Search</button>
-                  </form>
-            </div>
+        <h1>Add New Contact</h1>
+                
+        <div>
+            <p>Name</p>
+            <input type="text" placeholder="Name">
+            <p>Phone Number</p>
+            <input type="text" placeholder="Phone Number">
+            <p>E-mail</p>
+            <input type="text" placeholder="E-mail">
 
-            <div id="body">
-                <div id="main_content">
-                    <h2 style="font-size: 2rem;">Contacts</h2>
-                    
-                    <div id="diplay_box_header">
-                        <table class="table_head">
-                            <tr>
-                                <th>Name</th>
-                                <th>Phone Number</th>
-                                <th>E-mail</th>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr><script type="populate_contacts.js"></script></tr>
-                        </table>
-                    </div>
-                    <div id="contact_display_box">
-                        <p id="contactList"></p>  
-                        <br /><br />  
-                        <!-- <script src="search_return.js"></script> -->
-                    </div>
-                </div>
+            <div id="form_Buttons">
+                <button onclick="submit_form_data()">Add Contact</button> <!-- fyi addContact is referenced in submit_form_data-->
+                <button onclick="close_add_box()">Cancel</button>
             </div>
         </div>
+
+        <h2 style="font-size: 2rem;">Contacts</h2>
+        <div>
+            <p> Search Results get displayed here</p>
+        </div>
+        
     </body>
 </html>
 
