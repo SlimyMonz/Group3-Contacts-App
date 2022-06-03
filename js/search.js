@@ -46,7 +46,7 @@ function doSearch()
 function display_contacts(contactList){
     console.log("made it here");
     var my_table = document.getElementById("contact_display_box");
-    var itter = 0;
+    var itter = 1;
     console.log("there should be " + contactList.length + "rows");
     for(let i in contactList){
        

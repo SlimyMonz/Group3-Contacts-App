@@ -10,14 +10,6 @@ html {
     scroll-behavior: smooth;
     background-color:  #18634B;
 }
-thead{
-    min-width: 80%;
-}
-td {
-    min-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 #navbar{
     width: 100%;
@@ -254,9 +246,19 @@ td {
 #spinner 
 { visibility:hidden; } 
 
+table{
+    border: 1px solid black;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: auto;
 
+}
 
+tr{
+    border: 1px solid black;
+}
 
-
-
-
+tr, td{
+    width: 20%;
+    border: 1px solid black;
+}
