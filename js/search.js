@@ -1,6 +1,5 @@
 // search function
 
-
 function doSearch()
 {
     let srch = document.getElementById("search_bar").value;
@@ -26,14 +25,18 @@ function doSearch()
             if (this.readyState == 4 && this.status == 200)
             {
                 document.getElementById("contact_display_box").innerHTML = "Contact(s) has been retrieved";
-
                 let jsonObject = JSON.parse( xhr.responseText );
 
-                for (let i in jsonObject.searchResult) {
-                    contactList += JSON.stringify(i);
-                    contactList += "<br />\r\n";
-                    alert("Working?");
+                console.log(jsonObject.results);
+                for( let i=0; i<jsonObject.length; i++ )
+                {
+                    contactList += jsonObject.results[i];
+                    if( i < jsonObject.results.length - 1 )
+                    {
+                        contactList += "<br />\r\n";
+                    }
                 }
+              
 
                 document.getElementsByTagName("p")[0].innerHTML = contactList; //if not working try [3] instead of [0]
 
@@ -48,3 +51,4 @@ function doSearch()
     }
 
 }
+
