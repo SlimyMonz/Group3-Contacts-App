@@ -24,7 +24,7 @@ function doSearch()
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 console.log(xhr.responseText + "bruh mmnt extravaganza");
-                var jsObjectArr = JSON.parse(xhr.responseText);
+                let jsObjectArr = JSON.parse(xhr.responseText);
 
                 display_contacts(jsObjectArr.searchResult);
 
@@ -40,27 +40,26 @@ function doSearch()
 function display_contacts(contactList){
     console.log(contactList);
     console.log("made it here");
-    var my_table = document.getElementById("contact_display_box");
-    var itter = 1;
+    let my_table = document.getElementById("contact_display_box");
+    let itter = 1;
     console.log("there should be " + contactList.length + " rows");
-    for(let i in contactList){
-       
-        var my_row = my_table.insertRow(itter);
-        var cell_one = my_row.insertCell(0);
-        var cell_two = my_row.insertCell(1);
-        var cell_three = my_row.insertCell(2);
-        var cell_four = my_row.insertCell(3);
-        var cell_five = my_row.insertCell(4);
 
-        cell_one.innerHTML = "name goes here";
-        cell_two.innerHTML = "phone goes here";
-        cell_three.innerHTML = "email goes here";
+    for (let i = 0; i < contactList.length; i++) {
+        let my_row = my_table.insertRow(i);
+        let cell_one = my_row.insertCell(0);
+        let cell_two = my_row.insertCell(1);
+        let cell_three = my_row.insertCell(2);
+        let cell_four = my_row.insertCell(3);
+        let cell_five = my_row.insertCell(4);
+
+        cell_one.innerHTML = contactList[i].name;
+        cell_two.innerHTML = contactList[i].phone;
+        cell_three.innerHTML = contactList[i].email;
         cell_four.innerHTML = "<button id=\"table_edit\"> Edit </button>";
         cell_five.innerHTML = "<button id=\"table_delete\"> Delete </button>";
         console.log("itter: " +itter + " ");
-        itter++;
-
     }
+
     
 }
 
