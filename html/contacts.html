@@ -2,16 +2,11 @@
 <html lang="en">
 
     <head>
+        <title>User Home</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>User Home</title>
-        <!-- <link rel="stylesheet" href="/css/style.css"> -->
         <link type="text/css" href="/css/custom.css" rel="stylesheet">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-        </style> 
 
         <!--Group Code-->
         <script src="/js/app.js"></script>
@@ -20,6 +15,8 @@
         <script src="/js/login.js"></script>
         <script src="/js/modal.js"></script>
         <script src="/js/search.js"></script>
+        <script>drag();</script> <!--makes modal draggable-->
+    
 
          <!-- <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', function() {
@@ -34,9 +31,7 @@
 
         <!--jquery javascript-->
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-        
-           
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>           
     </head>
 
     <body>
@@ -48,29 +43,42 @@
                 <input class="form-control mr-sm-2 w-50 input-group"  id="search_bar" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-primary my-2 my-sm-0" id="search_btn" type="button" onclick="doSearch();" >Search</button>
             </form>
+            <button type="button" class="btn btn-primary my-2 my-sm-0" id="add_contact" data-bs-target="#exampleModal" data-bs-toggle="modal" >Add Contact</button>
         </div>
 
-        <h1>Add New Contact</h1>
-                
+        <h2>Contacts</h2>
         <div>
-            <p>Name</p>
-            <input type="text" placeholder="Name">
-            <p>Phone Number</p>
-            <input type="text" placeholder="Phone Number">
-            <p>E-mail</p>
-            <input type="text" placeholder="E-mail">
+            <p> Search Results get displayed here <i>someday</i></p>
+        </div>
 
-            <div id="form_Buttons">
-                <button onclick="submit_form_data()">Add Contact</button> <!-- fyi addContact is referenced in submit_form_data-->
-                <button onclick="close_add_box()">Cancel</button>
+        <!-- Modals -->
+        <div class="modal fade" class="ui-widget-content" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-green border-dark">
+                <h5 class="modal-title" id="exampleModalLabel">Add Contact</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-green">
+                <input type="text" class = "form-control w-50" id="Name" onfocus="this.value=''" value="Name">
+                <input type="text" class = "form-control w-50" id="E-mail" onfocus="this.value=''" value="E-Mail">
+                <input type="text" class = "form-control w-50" id="Phone" onfocus="this.value=''" value="Phone">
+
+                </div>
+                <div class="modal-footer bg-pink border-dark">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="add_contact();" data-bs-dismiss="modal" >Register</button>
+                </div>
+            </div>
             </div>
         </div>
 
-        <h2 style="font-size: 2rem;">Contacts</h2>
-        <div>
-            <p> Search Results get displayed here</p>
-        </div>
-        
+        <!--Bootstrap 5-->
+        <!--bootstrap javascript sourceS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
+            
     </body>
 </html>
 
