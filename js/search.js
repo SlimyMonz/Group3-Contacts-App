@@ -44,7 +44,7 @@ function doSearch()
 
 }
 
-display_contacts(contactList){
+function display_contacts(contactList){
     var my_table = Document.getElementById("contact_display_box");
     var itter = 0;
     for(let i in contactList){
