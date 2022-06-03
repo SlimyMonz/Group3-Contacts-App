@@ -11,11 +11,11 @@
 
         <script src="/js/cookie.js"></script>
 
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', function() {
                 readCookie();
             }, false);
-        </script>
+        </script> -->
 
         <!--Group Code-->
         <script src="/js/app.js"></script>
@@ -48,9 +48,15 @@
 	<h2 id="userName"></h2>
         <h2>Contacts</h2>
         <div>
-            <p> Search Results get displayed here <i>someday</i></p>
-            <div id ="contact_display_box">
-                <p></p>
+            <table id ="contact_display_box">
+                <thead>
+                    <td>Name</td>
+                    <td>Phone </td>
+                    <td>E-Mail </td>
+                    <td>edit </td>
+                    <td>delete </td>
+                </thead>
+                
             </div>
 		<script src="/js/search.js"></script>
         </div>

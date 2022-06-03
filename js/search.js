@@ -33,8 +33,8 @@ function doSearch()
                     contactList += jsObjectArr[i];
                 }
 
-                document.getElementById("contact_display_box").innerHTML = contactList;
-                alert(contactList); //this is for testing if the search actually works even if we can't display it
+                display_contacts(contactList);
+
             }
         };
         xhr.send(jsonPayload);
@@ -42,5 +42,26 @@ function doSearch()
         document.getElementById("contact_display_box").innerHTML = err.message;
     }
 
+}
+
+display_contacts(contactList){
+    var my_table = Document.getElementById("contact_display_box");
+    var itter = 0;
+    for(let i in contactList){
+        var my_row = my_table.insertRow(itter);
+        var cell_one = my_row.insertCell(0);
+        var cell_two = my_row.insertCell(1);
+        var cell_three = my_row.insertCell(2);
+        var cell_four = my_row.insertCell(3);
+        var cell_five = my_row.insertCell(4);
+
+        cell_one.innerHTML = "name goes here";
+        cell_two.innerHTML = "phone goes here";
+        cell_three.innerHTML = "email goes here";
+        cell_four.innerHTML = "<button id=\"table_edit\"> Edit </button>";
+        cell_five.innerHTML = "<button id=\"table_delete\"> Edit </button>";
+
+    }
+    
 }
 

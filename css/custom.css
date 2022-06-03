@@ -10,6 +10,14 @@ html {
     scroll-behavior: smooth;
     background-color:  #18634B;
 }
+thead{
+    min-width: 80%;
+}
+td {
+    min-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 #navbar{
     width: 100%;
