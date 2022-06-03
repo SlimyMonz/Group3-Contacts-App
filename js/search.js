@@ -26,13 +26,7 @@ function doSearch()
                 console.log(xhr.responseText + "bruh mmnt extravaganza");
                 var jsObjectArr = JSON.parse(xhr.responseText);
 
-
-                for (let i in jsObjectArr) {
-                    console.log(jsObjectArr[i]);
-                    contactList += jsObjectArr[i];
-                }
-
-                display_contacts(contactList);
+                display_contacts(jsObjectArr.searchResult);
 
             }
         };
@@ -44,10 +38,11 @@ function doSearch()
 }
 
 function display_contacts(contactList){
+    console.log(contactList);
     console.log("made it here");
     var my_table = document.getElementById("contact_display_box");
     var itter = 1;
-    console.log("there should be " + contactList.length + "rows");
+    console.log("there should be " + contactList.length + " rows");
     for(let i in contactList){
        
         var my_row = my_table.insertRow(itter);
@@ -63,6 +58,7 @@ function display_contacts(contactList){
         cell_four.innerHTML = "<button id=\"table_edit\"> Edit </button>";
         cell_five.innerHTML = "<button id=\"table_delete\"> Delete </button>";
         console.log("itter: " +itter + " ");
+        itter++;
 
     }
     
