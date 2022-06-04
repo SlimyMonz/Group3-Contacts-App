@@ -65,7 +65,7 @@ function display_contacts(contactList){
         cell_four.innerHTML = "<button id=\"table_edit\" data-index=\"\" onclick=\"showDetails(this);\"> Edit </button>";
 
         //didn't get to test this because fileZilla was acting whack
-        cell_five.innerHTML = "<button id=\"table_delete\" data-index=\"\" onclick=\"deleteContact(this);\> Delete </button>";
+        cell_five.innerHTML = "<button id=\"table_delete\" data-index=\"\" onclick=\"deleteContact(this);\"> Delete </button>";
         
         table_edit.data = id;   
         table_edit.id = "table_edit" + id;      
@@ -78,11 +78,6 @@ function display_contacts(contactList){
         //ignore
         // $("#table_edit").data("index", id); // <- second parameter
         // console.log($("#table_edit").data("index"));
-
-        console.log("itter: " +itter + " ");
-        itter++;
-
-
 
     }
 
