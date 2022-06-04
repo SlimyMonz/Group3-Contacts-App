@@ -1,5 +1,10 @@
 // search function
 
+function populateContacts(){
+    alert("userID " + userId);
+    doSearch();
+}
+
 function doSearch()
 {
     let srch = document.getElementById("search_bar").value;
