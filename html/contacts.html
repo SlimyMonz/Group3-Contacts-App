@@ -14,10 +14,11 @@
             document.addEventListener('DOMContentLoaded', function() {
                 readCookie();
             }, false);
-        </script>
+        </script> 
 
         <!--Group Code-->
         <script src="/js/app.js"></script>
+        <script src="/js/delete.js"></script>
         <script src="/js/contacts.js"></script>
         <script src="/js/login.js"></script>
         <script src="/js/modal.js"></script>
@@ -28,7 +29,23 @@
 
         <!--jquery javascript-->
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>           
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>    
+        
+        <!--put this here because I suspect it was causing me weird behavior, was in a div in the body-->
+        <script src="/js/search.js"></script> 
+        
+         <!--makes modal draggable-->
+        <script>drag();</script>
+
+        <!-- tested and this worked when called from onclick= edit button in search.js -->
+        <script> 
+            function showDetails(info) {
+              let contact_ID = info.id;
+              let contactoo = info.data;
+              alert("The unique id of the button is " + contact_ID + ".");
+              alert("The id of the contact is " + contactoo + ".");
+            }
+            </script>
     </head>
 
     <body>
@@ -65,10 +82,7 @@
             <!-- display tabole here via search.js -->
             <table id ="contact_display_box"></table>
                 
-            </div>
-		<script src="/js/search.js"></script>
-        </div>
-
+    
         <!-- Modals -->
         <div class="modal fade" class="ui-widget-content" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
