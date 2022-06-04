@@ -1,7 +1,5 @@
 // contacts functions
 
-
-
 function addContact()
 {
     let contactName = $("#name").val();
@@ -39,13 +37,5 @@ function addContact()
     }
 }
 
-function deleteContact() {
-    //grab contact ID and save to an object
 
-    //JSON.stringify(object)
-
-    //create url to POST to
-
-    //
-}
 

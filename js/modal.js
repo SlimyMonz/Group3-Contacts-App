@@ -1,6 +1,6 @@
 function drag()
 {
-    /*alert("we workin'");*/
+    alert("we workin'");
     
     $( function() 
     {

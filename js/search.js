@@ -37,6 +37,7 @@ function doSearch()
 
 }
 
+
 function display_contacts(contactList){
     console.log(contactList);
     console.log("made it here");
@@ -51,13 +52,35 @@ function display_contacts(contactList){
         let cell_three = my_row.insertCell(2);
         let cell_four = my_row.insertCell(3);
         let cell_five = my_row.insertCell(4);
+        
 
+        let id = contactList[i].id;
+        
         cell_one.innerHTML = contactList[i].name;
         cell_two.innerHTML = contactList[i].phone;
         cell_three.innerHTML = contactList[i].email;
-        cell_four.innerHTML = "<button id=\"table_edit\"> Edit </button>";
-        cell_five.innerHTML = "<button id=\"table_delete\"> Delete </button>";
+
+        //showDetails(this) is a proof of concept for getting the id for a specific contact per button, it worked
+        //showDetails is a function actually located in contact.html fyi
+        cell_four.innerHTML = "<button id=\"table_edit\" data-index=\"\" onclick=\"showDetails(this);\"> Edit </button>";
+
+        //didn't get to test this because fileZilla was acting whack
+        cell_five.innerHTML = "<button id=\"table_delete\" data-index=\"\" onclick=\"deleteContact(this);\> Delete </button>";
+        
+        table_edit.data = id;   
+        table_edit.id = "table_edit" + id;      
+
+        table_delete.data = id; //this is very important for delete contact, 
+                              //references data-index of button + stores contact id there
+
+        table_delete.id = "table_delete" + id; //"dynamically" changing the id of the buttons because the id should be unique
+         
+        //ignore
+        // $("#table_edit").data("index", id); // <- second parameter
+        // console.log($("#table_edit").data("index"));
+
         console.log("itter: " +itter + " ");
+        itter++;
     }
 
     
