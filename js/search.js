@@ -39,10 +39,9 @@ function doSearch()
 
 
 function display_contacts(contactList){
-    console.log(contactList);
-    console.log("made it here");
+
     let my_table = document.getElementById("contact_display_box");
-    let itter = 1;
+    
     console.log("there should be " + contactList.length + " rows");
 
     for (let i = 0; i < contactList.length; i++) {
@@ -59,6 +58,7 @@ function display_contacts(contactList){
         cell_one.innerHTML = contactList[i].name;
         cell_two.innerHTML = contactList[i].phone;
         cell_three.innerHTML = contactList[i].email;
+
 
         //showDetails(this) is a proof of concept for getting the id for a specific contact per button, it worked
         //showDetails is a function actually located in contact.html fyi
@@ -81,6 +81,9 @@ function display_contacts(contactList){
 
         console.log("itter: " +itter + " ");
         itter++;
+
+
+
     }
 
     
