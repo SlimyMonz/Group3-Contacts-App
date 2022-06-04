@@ -55,6 +55,7 @@ function display_contacts(contactList){
         cell_two.innerHTML = contactList[i].phone;
         cell_three.innerHTML = contactList[i].email;
         cell_four.innerHTML = "<img src=\"images/edit-icon.jpg\" id=\"table_edit\">";
+        //cell_four.innerHTML = "<button id=\"table_Edit\"> Edit </button>";
         cell_five.innerHTML = "<button id=\"table_delete\"> Delete </button>";
 
     }
