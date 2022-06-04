@@ -265,3 +265,13 @@ tr, td{
     font-size: 1.5rem;
 
 }
+
+#nav_right_side{
+    position:sticky;
+    right:0%;
+    margin-right: 10%;
+}
+
+#logo{
+    size: 3rem;
+}
