@@ -5,8 +5,6 @@ function doSearch()
     let srch = document.getElementById("search_bar").value;
     document.getElementById("contact_display_box").innerHTML = "";
 
-    let contactList = "";
-
     let tmp =
         {
             search: srch,
@@ -51,14 +49,12 @@ function display_contacts(contactList){
         let cell_three = my_row.insertCell(2);
         let cell_four = my_row.insertCell(3);
         let cell_five = my_row.insertCell(4);
-        
 
         let id = contactList[i].id;
         
         cell_one.innerHTML = contactList[i].name;
         cell_two.innerHTML = contactList[i].phone;
         cell_three.innerHTML = contactList[i].email;
-
 
         //showDetails(this) is a proof of concept for getting the id for a specific contact per button, it worked
         //showDetails is a function actually located in contact.html fyi
