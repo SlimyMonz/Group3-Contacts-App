@@ -3,7 +3,7 @@
 const urlBase = 'http://group3.rocks/LAMPAPI';
 const extension = 'php';
 
-let userId = 0;
+let userId = "";
 let firstName = "";
 let lastName = "";
 

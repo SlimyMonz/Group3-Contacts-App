@@ -28,8 +28,8 @@ function deleteContact(info)
             {
                 if (this.readyState == 4 && this.status == 200)
                 {
-                    //document.getElementById("colorAddResult").innerHTML = "Color has been added";
-                    alert("worked?");
+                    // repaint page
+                    doSearch();
                 }
             };
             xhr.send(jsonPayload);
