@@ -9,7 +9,7 @@ function deleteContact(info)
 
         let oldContact = 
         {
-            ID: contacto
+            id: contacto
         };
         
 
