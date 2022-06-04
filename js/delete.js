@@ -38,7 +38,8 @@ function deleteContact(info)
         {
             //document.getElementById("colorAddResult").innerHTML = err.message;
         }
-        doSearch();
+        //reset contacts?
+        //doSearch();
 
         //
     } 
