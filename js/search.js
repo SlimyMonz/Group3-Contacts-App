@@ -38,10 +38,9 @@ function doSearch()
 }
 
 function display_contacts(contactList){
-    console.log(contactList);
-    console.log("made it here");
+
     let my_table = document.getElementById("contact_display_box");
-    let itter = 1;
+    
     console.log("there should be " + contactList.length + " rows");
 
     for (let i = 0; i < contactList.length; i++) {
@@ -55,9 +54,9 @@ function display_contacts(contactList){
         cell_one.innerHTML = contactList[i].name;
         cell_two.innerHTML = contactList[i].phone;
         cell_three.innerHTML = contactList[i].email;
-        cell_four.innerHTML = "<button id=\"table_edit\"> Edit </button>";
+        cell_four.innerHTML = "<img src=\"images/edit-icon.jpg\" id=\"table_edit\">";
         cell_five.innerHTML = "<button id=\"table_delete\"> Delete </button>";
-        console.log("itter: " +itter + " ");
+
     }
 
     
