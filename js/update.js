@@ -67,8 +67,8 @@ function cancelEdit()
     {
         newPhone: contactPhone,
         newEmail: contactEmail,
-        name: contactName,
-        userId: user_Id
+        newName: contactName,
+        id: user_Id
         
     };
    
