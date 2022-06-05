@@ -1,11 +1,9 @@
 function deleteContact(info) 
 {
-    alert("delete starting? plz?")
     if (confirm("Are you sure you want to delete this contact FOREVER?!") == true) 
     {
         //grab contact ID and save to an object
         let contacto = info.data;
-        alert("The data is " + contacto + ".");
 
         let oldContact = 
         {
