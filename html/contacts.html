@@ -10,15 +10,16 @@
 
         <script src="/js/cookie.js"></script>
 
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', function() {
                 readCookie();
                 console.log("User id = " + userId);
             }, false);
-        </script> 
+        </script>  -->
 
         <!--Group Code-->
         <script src="/js/app.js"></script>
+        <script src="/js/update.js"></script>
         <script src="/js/delete.js"></script>
         <script src="/js/contacts.js"></script>
         <script src="/js/login.js"></script>
@@ -102,6 +103,28 @@
                 <div class="modal-footer bg-pink border-dark">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" onclick="addContact();" data-bs-dismiss="modal" >Add Contact</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!--This is the modal for edit contacts static backdrop and keyboard = false are important, don't remove-->
+        <div class="modal fade" class="ui-widget-content" id="getModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="getModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-green border-dark">
+                <h5 class="modal-title" id="getModalLabel">Edit Contact</h5>
+                </div>
+                <div class="modal-body bg-green">
+                <input type="text" class = "form-control w-50" id="editName" onfocus="this.value=''" value="Name">
+                <input type="text" class = "form-control w-50" id="editPhone" onfocus="this.value=''" value="Phone">
+                <input type="text" class = "form-control w-50" id="editEmail" onfocus="this.value=''" value="E-Mail">      
+
+                </div>
+                <div class="modal-footer bg-pink border-dark"> 
+                <!--cancelEdit() only called upon close, not edit. data-bs-dismiss not being in cancel is not a mistake-->
+                <!--this is because I needed a way to determine if the modal was closing because of a cancel or an actual submit-->
+                <button type="button" class="btn btn-secondary" onclick="cancelEdit();" >Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" >Edit Contact</button>
                 </div>
             </div>
             </div>
