@@ -1,10 +1,5 @@
 // search function
 
-function populateContacts(){
-    
-    alert("userID " + userId);
-    doSearch();
-}
 
 function doSearch()
 {
