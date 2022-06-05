@@ -53,28 +53,27 @@ function display_contacts(contactList){
 
         let id = contactList[i].id;
         
+        
         cell_one.innerHTML = contactList[i].name;
         cell_two.innerHTML = contactList[i].phone;
         cell_three.innerHTML = contactList[i].email;
 
-        //showDetails(this) is a proof of concept for getting the id for a specific contact per button, it worked
+        
         //showDetails is a function actually located in contact.html fyi
-        cell_four.innerHTML = "<button id=\"table_edit\" data-index=\"\" onclick=\"showDetails(this);\"> Edit </button>";
+
+        //editContact() located in update.js
+        cell_four.innerHTML = "<button id=\"table_edit\" data-index=\"\" onclick=\"editContact(this);\"> Edit </button>";
 
         //didn't get to test this because fileZilla was acting whack
         cell_five.innerHTML = "<button id=\"table_delete\" data-index=\"\" onclick=\"deleteContact(this);\"> Delete </button>";
         
-        table_edit.data = id;   
-        table_edit.id = "table_edit" + id;      
+        table_edit.data = id; 
+        table_edit.id = "table_edit" + id;  
 
-        table_delete.data = id; //this is very important for delete contact, 
+        table_delete.data = id; //this is very important for delete contact, same with edit ofc 
                               //references data-index of button + stores contact id there
-
         table_delete.id = "table_delete" + id; //"dynamically" changing the id of the buttons because the id should be unique
          
-        //ignore
-        // $("#table_edit").data("index", id); // <- second parameter
-        // console.log($("#table_edit").data("index"));
 
     }
 

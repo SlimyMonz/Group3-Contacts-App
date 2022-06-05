@@ -45,7 +45,11 @@ function spinnerOff()
     $('#spinner').addClass("d-none");
     
 }
-
+function modalTest()
+{
+    alert("testo");
+    $("#getModal").modal("show");
+}
 
 
 
