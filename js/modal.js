@@ -1,6 +1,5 @@
 function drag()
 {
-    alert("we workin'");
     
     $( function() 
     {
@@ -12,7 +11,6 @@ function drag()
     {
         $("#exampleModal").on("hidden.bs.modal", function() 
         {
-            //alert("nothin");
             
             clear();
             
@@ -48,10 +46,6 @@ function spinnerOff()
     
 }
 
-function testo()
-{
-    alert("srz biz");
-}
 
 
 
