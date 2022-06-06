@@ -53,25 +53,31 @@
 
     <body onload="doSearch();">
 
-        <div id="navbar" >
-            <h1 class="h4" id="logo" style="display: inline;">Monster Contacts</h1>
-            <br>
+        <div id="navbar" style="width: 100%;">
 
-            <form class="my-2 my-lg-0 form-group" style="display: inline;">
-                <input class="form-control mr-sm-2 w-50 input-group"  id="search_bar" type="search" placeholder="Search" aria-label="Search" style="display: inline; max-width: 20%;">
-                <button class="btn btn-primary my-2 my-sm-0" id="search_btn" type="button" onclick="doSearch();" >Search</button>
-            </form>
-
-            <div id="nav_right_side" style="display: inline;"> 
-                <button type="button" class="btn btn-primary my-2 my-sm-0" id="add_contact" data-bs-target="#exampleModal" data-bs-toggle="modal" >Add Contact</button>
-                <button type="button" id="logout" onclick="logout()">logout</button>
+            <div style="display: inline;">
+                <h1 class="h4" id="logo" style="float: left; ">Monster Contacts</h1>
+                <div style="float:right; padding-right: 30px;">
+                    <button type="button" class="btn btn-primary my-2 my-sm-0" id="add_contact" data-bs-target="#exampleModal" data-bs-toggle="modal" >Add Contact</button>
+                    <button type="button" id="logout" class="btn btn-primary my-2 my-sm-0" onclick="logout()">logout</button>
+                </div>
             </div>
+            
+
+        
+            <form class="my-2 my-lg-0 form-group" style="display:inline-block; width: 100%;">
+                <input class="form-control mr-sm-2 w-50 input-group"  id="search_bar" type="search" placeholder="Search" aria-label="Search" style=" display: inline; min-width: 20%;">
+                <button class="btn btn-primary my-2 my-sm-0" id="search_btn" type="button" onclick="doSearch();" style="display: inline;">Search</button>
+            </form>
+            
+            
+                
             
         </div>
 	
         
         <div id="main_content">
-            <h2 id="contact_title">Contacts</h2>
+            <h2 id="contact_title" >Contacts</h2>
             <div>
                 <table>
                     <tr>

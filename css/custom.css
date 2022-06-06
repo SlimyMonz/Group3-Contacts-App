@@ -12,8 +12,7 @@ html {
 }
 
 #navbar{
-    width: 100%;
-    /* position: fixed; */
+    min-width: 100%;
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -22,8 +21,7 @@ html {
     padding-bottom: 30px;
     top: 0%;
     left: 0%;
-    background-color:  #18634B;
-    
+    background-color:  #18634B;    
 }
 
 #createAccount
@@ -47,7 +45,6 @@ html {
     background-color: #18634B;
     border-color: #0e0f11;
     color: white;
-    
     
 }
 #search_bar:focus
@@ -212,7 +209,7 @@ html {
     -webkit-background-clip: text;
     background-clip: text;
 	-webkit-text-fill-color: transparent;
-    font-size: 42px;
+    font-size: 4rem;
     
 
 }
@@ -244,36 +241,39 @@ html {
 { visibility:hidden; } 
 
 table{
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
+    padding-left: 30px;
+    /* margin-left: 10%; */
     margin-right: auto;
 
 }
 
-tr, td{
-    width: 20%;
-}
-
 #contact_title{
-    margin-left: 10%;
+    font-size: 2.5rem;
 }
 
-.table_head_cells{
+.th_data_cell{
     font-size: 1.5rem;
-
+    width: 30%
+}
+th_button_cell{
+    width: auto;
+    font-size: 1.5rem;
 }
 
-#nav_right_side{
-    position:sticky;
-    right:0%;
-    margin-right: 10%;
-}
+
 
 #logo{
+    float: left;
     font-size: 3rem;
 }
 
 #main_content{
-   height: auto;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: auto;
     background-color: #18634B;
+    color: white;
 }
+
