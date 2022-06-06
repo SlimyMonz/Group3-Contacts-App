@@ -4,10 +4,12 @@
 function doSearch()
 {
     let srch = document.getElementById("search_bar").value;
+    let prop = $('#properties').val();
     document.getElementById("contact_display_box").innerHTML = "";
 
     let tmp =
         {
+            property: prop,
             search: srch,
             userId: userId
         };
@@ -15,7 +17,7 @@ function doSearch()
     let jsonPayload = JSON.stringify(tmp);
 
     let url = urlBase + '/Search.' + extension;
-
+    console.log(tmp);
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
