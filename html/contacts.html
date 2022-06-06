@@ -10,12 +10,12 @@
 
         <script src="/js/cookie.js"></script>
 
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', function() {
                 readCookie();
                 console.log("User id = " + userId);
             }, false);
-        </script> 
+        </script>  -->
 
         <!--Group Code-->
         <script src="/js/app.js"></script>
@@ -69,22 +69,25 @@
             
         </div>
 	
-	
-        <h2 id="contact_title">Contacts</h2>
-        <div>
-            <table>
-                <tr>
-                    <td class="th_data_cell">Name</td>
-                    <td class="th_data_cell">Phone </td>
-                    <td class="th_data_cell">E-Mail </td>
-                    <td class="th_button_cell">Edit </td>
-                    <td class="th_button_cell">Delete </td>
-                </tr>
-            </table>
+        
+        <div id="main_content">
+            <h2 id="contact_title">Contacts</h2>
+            <div>
+                <table>
+                    <tr>
+                        <td class="th_data_cell">Name</td>
+                        <td class="th_data_cell">Phone </td>
+                        <td class="th_data_cell">E-Mail </td>
+                        <td class="th_button_cell">Edit </td>
+                        <td class="th_button_cell">Delete </td>
+                    </tr>
+                </table>
 
-            <!-- display tabole here via search.js -->
-            <table id ="contact_display_box"></table>
-                
+                <!-- display tabole here via search.js -->
+                <table id ="contact_display_box"></table>
+            </div>
+            
+        </div> 
     
         <!-- Modals -->
         <div class="modal fade" class="ui-widget-content" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -101,7 +104,7 @@
 
                 </div>
                 <div class="modal-footer bg-pink border-dark">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" onclick="addContact();" data-bs-dismiss="modal" >Add Contact</button>
                 </div>
             </div>
