@@ -12,8 +12,7 @@ html {
 }
 
 #navbar{
-    width: 100%;
-    /* position: fixed; */
+    min-width: 100%;
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -22,8 +21,7 @@ html {
     padding-bottom: 30px;
     top: 0%;
     left: 0%;
-    background-color:  #18634B;
-    
+    background-color:  #18634B;    
 }
 
 #createAccount
@@ -47,7 +45,6 @@ html {
     background-color: #18634B;
     border-color: #0e0f11;
     color: white;
-    
     
 }
 #search_bar:focus
@@ -82,10 +79,7 @@ html {
     box-shadow: inset 2px 2px 5px #3e424b, inset -3px -3px 7px #3e424b;
     
 }
-#main_content
-{
-    margin-top: 300px;
-}
+
 .bg-green
 {
     background-color: #18634B;
@@ -159,7 +153,7 @@ html {
 }
 .btn 
 {
-    color: #bdadb7;    
+    color:  #18634B;    
 }
 .btn:hover {
     color: #bdadb7;
@@ -167,15 +161,15 @@ html {
     
 }
 .btn-primary {
-    color: #bdadb7;
+    color: #18634B;
     background-color: #18634B;
     border-color: #0e0f11;
     box-shadow: inset 2px 2px 5px #ca7105, inset -3px -3px 7px #aa0a72 !important;
 }
 
 .btn-primary:hover {
-    color: #bdadb7;
-    background-color: #3e424b;
+    color: #18634B;
+    background-color: #18634B;
     border-color: #0e0f11;
     box-shadow: inset 0 1px 0 rgba(236, 240, 243, 0.15), 0 1px 1px rgba(38, 40, 51, 0.075);
 }
@@ -215,7 +209,7 @@ html {
     -webkit-background-clip: text;
     background-clip: text;
 	-webkit-text-fill-color: transparent;
-    font-size: 42px;
+    font-size: 4rem;
     
 
 }
@@ -247,31 +241,38 @@ html {
 { visibility:hidden; } 
 
 table{
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
+    padding-left: 30px;
     margin-right: auto;
 
 }
 
-tr, td{
-    width: 20%;
-}
-
 #contact_title{
-    margin-left: 10%;
+    font-size: 2.5rem;
 }
 
-.table_head_cells{
+.th_data_cell{
     font-size: 1.5rem;
-
+    width: 30%
+}
+th_button_cell{
+    width: auto;
+    font-size: 1.5rem;
 }
 
-#nav_right_side{
-    position:sticky;
-    right:0%;
-    margin-right: 10%;
-}
+
 
 #logo{
-    size: 3rem;
+    float: left;
+    font-size: 3rem;
 }
+
+#main_content{
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: auto;
+    background-color: #18634B;
+    color: white;
+}
+

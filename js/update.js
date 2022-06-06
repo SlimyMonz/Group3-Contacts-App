@@ -38,15 +38,11 @@ function cancelEdit()
     let contactEmail = '';
 
     let user_Id = info.data; //gets contact's id
-    alert( "user id is: " + user_Id);
+
 
     showModal(); //pops up the modal
 
     await showModal(); //waits at this point before running any more of this function's code
-
-    alert("escape: " + theGreatEscape);
-    alert("thank goodness we made it this far");
-    
 
 
     if(theGreatEscape == 1) //we do NOT want to continue because user canceled
@@ -59,8 +55,6 @@ function cancelEdit()
     contactName = $("#editName").val();
     contactPhone = $("#editPhone").val();
     contactEmail = $("#editEmail").val();
-
-    alert("name: " + contactName + " phone: " + contactPhone + " email: " + contactEmail + " id: " + user_Id);
 
     //save into object
     let editedContact = 
@@ -89,7 +83,6 @@ function cancelEdit()
             {
                 
                 // repaint page
-                //alert("does this work?");
                 doSearch();
             }
         };
