@@ -257,6 +257,11 @@ table{
     
 }
 
+.table_button_class:hover{
+    color: #ca7105;
+    
+}
+
 .table_data{
     font-size: 1.5rem;
     width: 30%
@@ -274,5 +279,9 @@ table{
     height: auto;
     background-color: #18634B;
     color: white;
+}
+
+ion-icon {
+    font-size: 36px;
 }
 
