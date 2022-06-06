@@ -71,10 +71,10 @@ function display_contacts(contactList){
         //showDetails is a function actually located in contact.html fyi
 
         //editContact() located in update.js
-        cell_four.innerHTML = "<button id=\"table_edit\" data-index=\"\" onclick=\"editContact(this);\"> Edit </button>";
+        cell_four.innerHTML = "<div id=\"table_edit\" data-index=\"\" onclick=\"editContact(this);\"><ion-icon name=\"create-outline\"></ion-icon></div>";
 
         //didn't get to test this because fileZilla was acting whack
-        cell_five.innerHTML = "<button id=\"table_delete\" data-index=\"\" onclick=\"deleteContact(this);\"> Delete </button>";
+        cell_five.innerHTML = "<div id=\"table_delete\" data-index=\"\" onclick=\"deleteContact(this);\"> <ion-icon name=\"trash-outline\"></ion-icon></div>";
         
         table_edit.data = id; 
         table_edit.id = "table_edit" + id;  
