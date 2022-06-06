@@ -16,7 +16,23 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("SELECT * FROM Contacts WHERE Name LIKE ? AND UserID=?");
+		$propertyToSeach = $inData["property"] ?: "Name";
+
+		if( $propertyToSeach == "Name")
+		{
+			$stmt = $conn->prepare("SELECT * FROM Contacts WHERE Name LIKE ? AND UserID=? ORDER BY Name Asc");
+		}
+		
+		else if( $propertyToSeach == "Phone")
+		{
+			$stmt = $conn->prepare("SELECT * FROM Contacts WHERE Phone LIKE ? AND UserID=? ORDER BY Phone Asc");
+		}
+
+		else if( $propertyToSeach == "Email")
+		{
+			$stmt = $conn->prepare("SELECT * FROM Contacts WHERE Email LIKE ? AND UserID=? ORDER BY Email Asc");
+		}
+
 		$contactName = "%" . $inData["search"] . "%";
 		$stmt->bind_param("ss", $contactName, $inData["userId"]);
 		$stmt->execute();
