@@ -161,14 +161,14 @@ html {
     
 }
 .btn-primary {
-    color: #18634B;
+    color: #bdadb7;
     background-color: #18634B;
     border-color: #0e0f11;
     box-shadow: inset 2px 2px 5px #ca7105, inset -3px -3px 7px #aa0a72 !important;
 }
 
 .btn-primary:hover {
-    color: #18634B;
+    color: #bdadb7;
     background-color: #18634B;
     border-color: #0e0f11;
     box-shadow: inset 0 1px 0 rgba(236, 240, 243, 0.15), 0 1px 1px rgba(38, 40, 51, 0.075);
@@ -259,6 +259,20 @@ table{
 .th_button_cell{
     width: auto;
     font-size: 1.5rem;
+}
+
+.table_edit{
+    width: auto;
+}
+
+.table_delete{
+    width: auto;
+    font-size: 1.5rem;
+}
+
+.table_data{
+    font-size: 1.5rem;
+    width: 30%
 }
 
 
