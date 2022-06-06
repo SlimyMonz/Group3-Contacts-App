@@ -251,31 +251,16 @@ table{
     font-size: 2.5rem;
 }
 
-.th_data_cell{
-    font-size: 1.5rem;
-    width: 30%
-}
-
-.th_button_cell{
-    width: auto;
-    font-size: 1.5rem;
-}
-
-.table_edit{
-    width: auto;
-}
-
-.table_delete{
-    width: auto;
-    font-size: 1.5rem;
+.table_button_class{
+    width: 5%;
+    font-size: 1rem;
+    
 }
 
 .table_data{
     font-size: 1.5rem;
     width: 30%
 }
-
-
 
 #logo{
     float: left;

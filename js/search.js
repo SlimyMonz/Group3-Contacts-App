@@ -53,6 +53,13 @@ function display_contacts(contactList){
         let cell_four = my_row.insertCell(3);
         let cell_five = my_row.insertCell(4);
 
+        cell_one.classList.add("table_data");
+        cell_two.classList.add("table_data");
+        cell_three.classList.add("table_data");
+        cell_four.classList.add("table_button_class");
+        cell_five.classList.add("table_button_class");
+
+
         let id = contactList[i].id;
         
         
@@ -64,10 +71,10 @@ function display_contacts(contactList){
         //showDetails is a function actually located in contact.html fyi
 
         //editContact() located in update.js
-        cell_four.innerHTML = "<button id=\"table_edit\" class=\"table_edit_class\"data-index=\"\" onclick=\"editContact(this);\"> Edit </button>";
+        cell_four.innerHTML = "<button id=\"table_edit\" data-index=\"\" onclick=\"editContact(this);\"> Edit </button>";
 
         //didn't get to test this because fileZilla was acting whack
-        cell_five.innerHTML = "<button id=\"table_delete\" class=\"table_delete_class\"data-index=\"\" onclick=\"deleteContact(this);\"> Delete </button>";
+        cell_five.innerHTML = "<button id=\"table_delete\" data-index=\"\" onclick=\"deleteContact(this);\"> Delete </button>";
         
         table_edit.data = id; 
         table_edit.id = "table_edit" + id;  
