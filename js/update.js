@@ -39,6 +39,8 @@ function cancelEdit()
 
     let user_Id = info.data; //gets contact's id
 
+    //alert("row" + info.parentNode.parentNode.rowIndex + " - column" + info.parentNode.cellIndex);
+
 
     showModal(); //pops up the modal
 

@@ -6,6 +6,11 @@ function drag()
         $( "#exampleModal" ).draggable();
     } 
     );
+    $( function() 
+    {
+        $( "#getModal" ).draggable();
+    } 
+    );
     
     $( function() 
     {
@@ -23,10 +28,10 @@ function drag()
         $("#exampleModal").on("show.bs.modal", function() 
         {
             //alert("yessem");
-            $("#first_name").val("First Name");
-            $("#last_name").val("Last Name");
-            $("#reg_login").val("Login");
-            $("#reg_password").val("Password");
+            // $("#first_name").val("First Name");
+            // $("#last_name").val("Last Name");
+            // $("#reg_login").val("Login");
+            // $("#reg_password").val("Password");
             
         });
     });
@@ -49,6 +54,16 @@ function modalTest()
 {
     alert("testo");
     $("#getModal").modal("show");
+}
+
+//this is useful to me for testing the editContact modal locally for now
+function testo()
+{
+    $( function()
+    {
+        $("#getModal").modal("show"); 
+    })
+  
 }
 
 

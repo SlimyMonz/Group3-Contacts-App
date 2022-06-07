@@ -67,6 +67,9 @@ function display_contacts(contactList){
         cell_two.innerHTML = contactList[i].phone;
         cell_three.innerHTML = contactList[i].email;
 
+        //not quite working yet concept for filling in the edit modal with original contacts data
+        //alert(my_table.row.item(0).cells.item(0).innerHTML);
+        
         
         //showDetails is a function actually located in contact.html fyi
 
