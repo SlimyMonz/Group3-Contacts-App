@@ -11,6 +11,7 @@ html {
     background-color:  #18634B;
 }
 
+
 #navbar{
     min-width: 100%;
     margin-top: 0px;
@@ -35,6 +36,22 @@ html {
 {
     color:#ca7105;
     
+}
+#add_contact, #logout  /* "color" changes text in button's color, "background-color" changes color of button*/
+{
+    
+    background-color: #18634B;  
+    border-color: #0e0f11;  
+
+}
+#add_contact:hover, #logout:hover
+{
+    
+    color: #c6c7cd;
+    background-color: #3e424b;
+    border-color: #0e0f11;
+    box-shadow: inset 2px 2px 5px #3e424b, inset -3px -3px 7px #3e424b;
+
 }
 #create:hover
 {
@@ -79,7 +96,6 @@ html {
     box-shadow: inset 2px 2px 5px #3e424b, inset -3px -3px 7px #3e424b;
     
 }
-
 .bg-green
 {
     background-color: #18634B;
@@ -153,25 +169,35 @@ html {
 }
 .btn 
 {
-    color:  #18634B;    
+    color:  #18634B;
+       
 }
+.btn-success
+{
+    color:#ca7105;
+}
+
 .btn:hover {
     color: #bdadb7;
     text-decoration: none;
     
 }
 .btn-primary {
-    color: #bdadb7;
-    background-color: #18634B;
-    border-color: #0e0f11;
+    color: #f3eef1;
+    background-color: #18634B !important;
+    border-color: #0e0f11 !important;
     box-shadow: inset 2px 2px 5px #ca7105, inset -3px -3px 7px #aa0a72 !important;
 }
 
 .btn-primary:hover {
     color: #bdadb7;
-    background-color: #18634B;
-    border-color: #0e0f11;
+    background-color: #3e424b !important;
+    border-color: #0e0f11 !important;
     box-shadow: inset 0 1px 0 rgba(236, 240, 243, 0.15), 0 1px 1px rgba(38, 40, 51, 0.075);
+}
+.btn-primary:active
+{
+    color: #aa0a72 !important;
 }
 
 .shadow-soft 
@@ -194,7 +220,7 @@ html {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #828393;
+    color: #828393 !important;
     text-align: center;
     white-space: nowrap;
     background-color: #e6e7ee;
@@ -222,6 +248,10 @@ html {
 {
     /*background-color:aliceblue;*/
     height: 400px;
+}
+#first_name, #last_name, #reg_login, #reg_password
+{
+    color: #78797d;
 }
 .modal
 {

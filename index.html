@@ -87,12 +87,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body bg-green">
-                <input type="text" class = "form-control w-50" id="first_name" onfocus="this.value=''" value="First Name">
-                <input type="text" class = "form-control w-50" id="last_name" onfocus="this.value=''" value="Last Name">
-                <input type="text" class = "form-control w-50" id="reg_login" onfocus="this.value=''" value="Login">
-                <input type="text" class = "form-control w-50" id="reg_password" onfocus="this.value=''" value="Password">
+                <input type="text" class = "form-control w-50" id="first_name" onfocus="this.placeholder=''" onblur="this.placeholder='First Name'" placeholder="First Name" value="">
+                <input type="text" class = "form-control w-50" id="last_name" onfocus="this.placeholder=''" onblur="this.placeholder='Last Name'" placeholder="Last Name" value="">
+                <input type="text" class = "form-control w-50" id="reg_login" onfocus="this.placeholder=''" onblur="this.placeholder='Login'" placeholder="Login" value="">
+                <input type="text" class = "form-control w-50" id="reg_password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" placeholder="Password" value="">
 
-                </div>
+                </div>                                                          
                 <div class="modal-footer bg-pink border-dark">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" onclick="doRegister();" data-bs-dismiss="modal" >Register</button>
