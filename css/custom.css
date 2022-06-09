@@ -10,6 +10,10 @@ html {
     scroll-behavior: smooth;
     background-color:  #18634B;
 }
+label
+{
+ color: white;
+}
 
 
 #navbar{
@@ -27,14 +31,14 @@ html {
 
 #createAccount
 {
-    color:#c116b3;
+    color:#fdbae5;
     margin-bottom: 5px;
     margin-right: 7px;
     
 }
 #register
 {
-    color:#ca7105;
+    color:#fcc583;
     
 }
 #add_contact, #logout  /* "color" changes text in button's color, "background-color" changes color of button*/
@@ -102,11 +106,12 @@ html {
 }
 .bg-orange
 {
-    background-color: #ca7105;
+    background-color: #fcc583;
 }
 .bg-pink
 {
- background-color: #aa0a72;
+ background-color: #fdbae5;
+ /*#aa0a72*/
 }
 
 .card {
@@ -134,7 +139,7 @@ html {
 .card-header
 {
     background-color: #18634B;
-    border-color: #ca7105;
+    border-color: #fcc583;
 }
 
 .form-control {
@@ -151,7 +156,7 @@ html {
     background-color: #18634B;
     border-color: #0e0f11;
     outline: 0;
-    box-shadow: inset 2px 2px 5px #ca7105, inset -3px -3px 7px #aa0a72 !important;
+    box-shadow: inset 2px 2px 5px #fcc583, inset -3px -3px 7px #fdbae5 !important;
     transition: all 0.3s ease-in-out;
     
    
@@ -174,7 +179,7 @@ html {
 }
 .btn-success
 {
-    color:#ca7105;
+    color:#fcc583;
 }
 
 .btn:hover {
@@ -186,7 +191,7 @@ html {
     color: #f3eef1;
     background-color: #18634B !important;
     border-color: #0e0f11 !important;
-    box-shadow: inset 2px 2px 5px #ca7105, inset -3px -3px 7px #aa0a72 !important;
+    box-shadow: inset 2px 2px 5px #fcc583, inset -3px -3px 7px #fdbae5 !important;
 }
 
 .btn-primary:hover {
@@ -197,18 +202,18 @@ html {
 }
 .btn-primary:active
 {
-    color: #aa0a72 !important;
+    color: #fdbae5 !important;
 }
 
 .shadow-soft 
 {
 
-    box-shadow: 6px 6px 12px #aa0a72, -6px -6px 12px #ca7105 !important;
+    box-shadow: 6px 6px 12px #fdbae5, -6px -6px 12px #fcc583 !important;
 }
 
 .shadow-inset 
 {
-    box-shadow: inset 2px 2px 5px #aa0a72, inset -3px -3px 7px #ca7105 !important;
+    box-shadow: inset 2px 2px 5px #fdbae5, inset -3px -3px 7px #fcc583 !important;
 }
 
 .input-group-text 
@@ -231,7 +236,7 @@ html {
 
 .h4 /*header*/
 {
-    background: linear-gradient(to right, #de7d05 0%, #c60d85 100%);
+    background: linear-gradient(to right, #fcc583 0%, #fdbae5 100%);
     -webkit-background-clip: text;
     background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -288,7 +293,7 @@ table{
 }
 
 .table_button_class:hover{
-    color: #ca7105;
+    color: #fcc583;
     
 }
 

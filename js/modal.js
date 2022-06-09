@@ -17,8 +17,6 @@ function drag()
         $("#exampleModal").on("hidden.bs.modal", function() 
         {
             
-            clear();
-            
             
         });
     });
