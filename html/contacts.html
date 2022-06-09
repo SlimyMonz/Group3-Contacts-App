@@ -73,7 +73,7 @@
                     <option value="Phone">Phone</option>
                     <option value="Email">Email</option>
                 </select>
-                <input class="form-control mr-sm-2 w-50 input-group"  onfocus="this.placeholder=''" onblur="this.placeholder='Search'" id="search_bar" type="search" placeholder="Search" aria-label="Search" style="display: inline; max-width: 20%;">
+                <input class="form-control mr-sm-2 w-50 input-group"  id="search_bar" onfocus="this.placeholder=''" onblur="this.placeholder='Search'"  type="search" placeholder="Search" aria-label="Search" style="display: inline; max-width: 20%;">
                 <button class="btn btn-primary my-2 my-sm-0" type="button" id="search_btn"  onclick="doSearch();" >Search</button>
             </form>
 
@@ -149,6 +149,19 @@
         <!-- Icons -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        
+        <!--this listens for when we press enter on search, disables refresh, searches instead, needs to be at bottom-->
+        <script>
+        let input = document.getElementById("search_bar");
+            input.addEventListener("keypress", function(event) 
+            {
+                if (event.key === "Enter") 
+                {
+                    event.preventDefault();
+                    document.getElementById("search_btn").click();
+                }
+            });
+        </script>
 
     </body>
 </html>

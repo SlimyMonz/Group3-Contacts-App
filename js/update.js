@@ -32,14 +32,26 @@ function cancelEdit()
  async function editContact(info)
 {
 
+    let my_table = document.getElementById("contact_display_box");
+    let row = info.parentNode.parentNode.rowIndex;
 
-    let contactName = '';
-    let contactPhone = '';
-    let contactEmail = '';
+    let contactName = my_table.rows[row].cells[0].innerHTML;
+    let contactPhone = my_table.rows[row].cells[1].innerHTML;
+    let contactEmail = my_table.rows[row].cells[2].innerHTML;
 
     let user_Id = info.data; //gets contact's id
 
-    //alert("row" + info.parentNode.parentNode.rowIndex + " - column" + info.parentNode.cellIndex);
+    alert("row " + row + " - column" + info.parentNode.cellIndex);
+    alert("name: " + contactName + " phone: " + contactPhone + " email: " + contactEmail);
+
+
+    // alert("name in row: " + my_table.rows[info.parentNode.parentNode.rowIndex].cells[0].innerHTML);
+    // alert("phone in row: " + my_table.rows[info.parentNode.parentNode.rowIndex].cells[1].innerHTML);
+    // alert("eMAIL in row: " + my_table.rows[info.parentNode.parentNode.rowIndex].cells[2].innerHTML);
+
+    document.getElementById("editName").value = contactName;
+    document.getElementById("editPhone").value = contactPhone;
+    document.getElementById("editEmail").value = contactEmail;
 
 
     showModal(); //pops up the modal
@@ -85,7 +97,10 @@ function cancelEdit()
             {
                 
                 // repaint page
-                doSearch();
+                //doSearch();
+                my_table.rows[row].cells[0].innerHTML = contactName;
+                my_table.rows[row].cells[1].innerHTML = contactPhone;
+                my_table.rows[row].cells[2].innerHTML = contactEmail;
             }
         };
         xhr.send(jsonPayload);

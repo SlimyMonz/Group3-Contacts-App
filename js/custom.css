@@ -10,11 +10,6 @@ html {
     scroll-behavior: smooth;
     background-color:  #18634B;
 }
-label
-{
- color: white;
-}
-
 
 #navbar{
     min-width: 100%;
@@ -31,31 +26,15 @@ label
 
 #createAccount
 {
-    color:#fdbae5;
+    color:#c116b3;
     margin-bottom: 5px;
     margin-right: 7px;
     
 }
 #register
 {
-    color:#fcc583;
+    color:#ca7105;
     
-}
-#add_contact, #logout  /* "color" changes text in button's color, "background-color" changes color of button*/
-{
-    
-    background-color: #18634B;  
-    border-color: #0e0f11;  
-
-}
-#add_contact:hover, #logout:hover
-{
-    
-    color: #c6c7cd;
-    background-color: #3e424b;
-    border-color: #0e0f11;
-    box-shadow: inset 2px 2px 5px #3e424b, inset -3px -3px 7px #3e424b;
-
 }
 #create:hover
 {
@@ -100,18 +79,18 @@ label
     box-shadow: inset 2px 2px 5px #3e424b, inset -3px -3px 7px #3e424b;
     
 }
+
 .bg-green
 {
     background-color: #18634B;
 }
 .bg-orange
 {
-    background-color: #fcc583;
+    background-color: #ca7105;
 }
 .bg-pink
 {
- background-color: #fdbae5;
- /*#aa0a72*/
+ background-color: #aa0a72;
 }
 
 .card {
@@ -139,7 +118,7 @@ label
 .card-header
 {
     background-color: #18634B;
-    border-color: #fcc583;
+    border-color: #ca7105;
 }
 
 .form-control {
@@ -156,7 +135,7 @@ label
     background-color: #18634B;
     border-color: #0e0f11;
     outline: 0;
-    box-shadow: inset 2px 2px 5px #fcc583, inset -3px -3px 7px #fdbae5 !important;
+    box-shadow: inset 2px 2px 5px #ca7105, inset -3px -3px 7px #aa0a72 !important;
     transition: all 0.3s ease-in-out;
     
    
@@ -174,46 +153,36 @@ label
 }
 .btn 
 {
-    color:  #18634B;
-       
+    color:  #18634B;    
 }
-.btn-success
-{
-    color:#fcc583;
-}
-
 .btn:hover {
     color: #bdadb7;
     text-decoration: none;
     
 }
 .btn-primary {
-    color: #f3eef1;
-    background-color: #18634B !important;
-    border-color: #0e0f11 !important;
-    box-shadow: inset 2px 2px 5px #fcc583, inset -3px -3px 7px #fdbae5 !important;
+    color: #bdadb7;
+    background-color: #18634B;
+    border-color: #0e0f11;
+    box-shadow: inset 2px 2px 5px #ca7105, inset -3px -3px 7px #aa0a72 !important;
 }
 
 .btn-primary:hover {
     color: #bdadb7;
-    background-color: #3e424b !important;
-    border-color: #0e0f11 !important;
+    background-color: #18634B;
+    border-color: #0e0f11;
     box-shadow: inset 0 1px 0 rgba(236, 240, 243, 0.15), 0 1px 1px rgba(38, 40, 51, 0.075);
-}
-.btn-primary:active
-{
-    color: #fdbae5 !important;
 }
 
 .shadow-soft 
 {
 
-    box-shadow: 6px 6px 12px #fdbae5, -6px -6px 12px #fcc583 !important;
+    box-shadow: 6px 6px 12px #aa0a72, -6px -6px 12px #ca7105 !important;
 }
 
 .shadow-inset 
 {
-    box-shadow: inset 2px 2px 5px #fdbae5, inset -3px -3px 7px #fcc583 !important;
+    box-shadow: inset 2px 2px 5px #aa0a72, inset -3px -3px 7px #ca7105 !important;
 }
 
 .input-group-text 
@@ -225,7 +194,7 @@ label
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #828393 !important;
+    color: #828393;
     text-align: center;
     white-space: nowrap;
     background-color: #e6e7ee;
@@ -236,7 +205,7 @@ label
 
 .h4 /*header*/
 {
-    background: linear-gradient(to right, #fcc583 0%, #fdbae5 100%);
+    background: linear-gradient(to right, #de7d05 0%, #c60d85 100%);
     -webkit-background-clip: text;
     background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -253,10 +222,6 @@ label
 {
     /*background-color:aliceblue;*/
     height: 400px;
-}
-#first_name, #last_name, #reg_login, #reg_password
-{
-    color: #78797d;
 }
 .modal
 {
@@ -292,11 +257,6 @@ table{
     
 }
 
-.table_button_class:hover{
-    color: #fcc583;
-    
-}
-
 .table_data{
     font-size: 1.5rem;
     width: 30%
@@ -314,9 +274,5 @@ table{
     height: auto;
     background-color: #18634B;
     color: white;
-}
-
-ion-icon {
-    font-size: 36px;
 }
 

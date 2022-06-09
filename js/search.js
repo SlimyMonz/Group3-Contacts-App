@@ -70,6 +70,8 @@ function display_contacts(contactList){
         //not quite working yet concept for filling in the edit modal with original contacts data
         //alert(my_table.row.item(0).cells.item(0).innerHTML);
         
+       
+        
         
         //showDetails is a function actually located in contact.html fyi
 
@@ -86,6 +88,8 @@ function display_contacts(contactList){
                               //references data-index of button + stores contact id there
         table_delete.id = "table_delete" + id; //"dynamically" changing the id of the buttons because the id should be unique
          
+
+        //alert(my_table.rows[0].cells[0].innerHTML);
 
     }
 
