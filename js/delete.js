@@ -27,7 +27,12 @@ function deleteContact(info)
                 if (this.readyState == 4 && this.status == 200)
                 {
                     // repaint page
-                    doSearch();
+                    //doSearch();
+
+                    //get row from which we clicked delete
+                    let row = info.parentNode.parentNode.rowIndex;
+                    //delete it ez
+                    document.getElementById("contact_display_box").deleteRow(row);
                 }
             };
             xhr.send(jsonPayload);
