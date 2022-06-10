@@ -20,6 +20,7 @@ label
  margin-top: 1em; 
 }
 
+
 #navbar{
     min-width: 100%;
     margin-top: 0px;
@@ -207,11 +208,29 @@ label
 
 .btn-primary:hover {
     color: #c6c7cd;
-    background-color: #5B3174 !important;
+    background-color: #2B1E32 !important;
     border-color: #0e0f11 !important;
     box-shadow: 0px 0px 1px 1px #000000;
 }
 .btn-primary:active
+{
+    color: #2B1E32  !important;
+}
+
+.btn-secondary {
+    color: #E8B045;
+    background-color: #2B1E32 !important;
+    border-color: #0e0f11 !important;
+    box-shadow: 0px 0px 10px 1px #000000;
+}
+
+.btn-secondary:hover {
+    color: #c6c7cd;
+    background-color: #5B3174 !important;
+    border-color: #0e0f11 !important;
+    box-shadow: 0px 0px 1px 1px #000000;
+}
+.btn-secondary:active
 {
     color: #2B1E32  !important;
 }
@@ -273,13 +292,18 @@ label
 }
 .modal-dialog
 {
-
     margin-right: 50;
     margin-left: 50;
 }
 .modal-header
 {      /* not necessary but imo important for user */
+    background-color: #5B3174;
     cursor: move;
+}
+
+.modal-footer
+{      /* not necessary but imo important for user */
+    background-color: #5B3174;
 }
 
 #spinner 
