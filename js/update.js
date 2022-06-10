@@ -35,17 +35,25 @@ function cancelEdit()
     let my_table = document.getElementById("contact_display_box");
     let row = info.parentNode.parentNode.rowIndex;
 
-    //gets our current data in that row
+
+    let my_table = document.getElementById("contact_display_box");
+    let row = info.parentNode.parentNode.rowIndex;
+
+
     let contactName = my_table.rows[row].cells[0].innerHTML;
     let contactPhone = my_table.rows[row].cells[1].innerHTML;
     let contactEmail = my_table.rows[row].cells[2].innerHTML;
 
     let user_Id = info.data; //gets contact's id
 
-    // alert("row " + row + " - column" + info.parentNode.cellIndex);
-    // alert("name: " + contactName + " phone: " + contactPhone + " email: " + contactEmail);
+    //alert("row " + row + " - column" + info.parentNode.cellIndex);
+    //alert("name: " + contactName + " phone: " + contactPhone + " email: " + contactEmail);
 
-    //fills modal with current contact info
+
+    // alert("name in row: " + my_table.rows[info.parentNode.parentNode.rowIndex].cells[0].innerHTML);
+    // alert("phone in row: " + my_table.rows[info.parentNode.parentNode.rowIndex].cells[1].innerHTML);
+    // alert("eMAIL in row: " + my_table.rows[info.parentNode.parentNode.rowIndex].cells[2].innerHTML);
+
     document.getElementById("editName").value = contactName;
     document.getElementById("editPhone").value = contactPhone;
     document.getElementById("editEmail").value = contactEmail;

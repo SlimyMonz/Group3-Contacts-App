@@ -17,14 +17,12 @@ function doSearch()
     let jsonPayload = JSON.stringify(tmp);
 
     let url = urlBase + '/Search.' + extension;
-    console.log(tmp);
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
     try {
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                console.log(xhr.responseText + "bruh mmnt extravaganza");
                 let jsObjectArr = JSON.parse(xhr.responseText);
 
                 display_contacts(jsObjectArr.searchResult);
@@ -43,8 +41,6 @@ function display_contacts(contactList){
 
     let my_table = document.getElementById("contact_display_box");
     
-    console.log("there should be " + contactList.length + " rows");
-
     for (let i = 0; i < contactList.length; i++) {
         let my_row = my_table.insertRow(i);
         let cell_one = my_row.insertCell(0);
@@ -70,8 +66,6 @@ function display_contacts(contactList){
         //not quite working yet concept for filling in the edit modal with original contacts data
         //alert(my_table.row.item(0).cells.item(0).innerHTML);
         
-       
-        //showDetails is a function actually located in contact.html fyi
 
         //editContact() located in update.js
         cell_four.innerHTML = "<div id=\"table_edit\" data-index=\"\" onclick=\"editContact(this);\"><ion-icon name=\"create-outline\"></ion-icon></div>";
@@ -88,6 +82,7 @@ function display_contacts(contactList){
          
 
         //alert(my_table.rows[0].cells[0].innerHTML);
+
     }
 
     
