@@ -83,7 +83,7 @@ label
 }
 #search_bar:focus
 {
-    color: #c6c7cd;
+    color: #E8B045;
     background-color: #2B1E32;
     border-color: #0e0f11;
 }
@@ -214,7 +214,8 @@ label
 }
 .btn-primary:active
 {
-    color: #2B1E32  !important;
+    color: #E8B045  !important;
+
 }
 
 .btn-secondary {
@@ -232,7 +233,7 @@ label
 }
 .btn-secondary:active
 {
-    color: #2B1E32  !important;
+    color: #E8B045  !important;
 }
 
 
@@ -297,13 +298,13 @@ label
 }
 .modal-header
 {      /* not necessary but imo important for user */
-    background-color: #5B3174;
+    background-color: #5B3174; !important;
     cursor: move;
 }
 
 .modal-footer
 {      /* not necessary but imo important for user */
-    background-color: #5B3174;
+    background-color: #5B3174; !important;
 }
 
 #spinner 
@@ -368,3 +369,17 @@ ion-icon {
     font-size: 36px;
 }
 
+#properties {
+    color: #E8B045;
+    background-color: #5B3174;
+}
+
+#properties:hover{
+    color: #c6c7cd;
+    background-color: #2B1E32;
+}
+
+#properties:active{
+    color: #E8B045;
+    background-color: #5B3174;
+}
