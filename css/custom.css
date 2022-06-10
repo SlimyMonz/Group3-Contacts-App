@@ -79,6 +79,7 @@ label
     background-color: #5B3174;
     border-color: #0e0f11;
     color: #E8B045;
+    box-shadow: 0px 0px 10px 1px #000000;
     
 }
 #search_bar:focus
@@ -86,6 +87,7 @@ label
     color: #E8B045;
     background-color: #2B1E32;
     border-color: #0e0f11;
+    box-shadow: 0px 0px 10px 1px #000000;
 }
 #search_btn
 {
@@ -200,14 +202,14 @@ label
     
 }
 .btn-primary {
-    color: #E8B045;
+    color: #E8B045 !important;
     background-color: #5B3174 !important;
     border-color: #0e0f11 !important;
     box-shadow: 0px 0px 10px 1px #000000;
 }
 
 .btn-primary:hover {
-    color: #c6c7cd;
+    color: #c6c7cd !important;
     background-color: #2B1E32 !important;
     border-color: #0e0f11 !important;
     box-shadow: 0px 0px 1px 1px #000000;
@@ -219,14 +221,14 @@ label
 }
 
 .btn-secondary {
-    color: #E8B045;
+    color: #E8B045 !important;
     background-color: #2B1E32 !important;
     border-color: #0e0f11 !important;
     box-shadow: 0px 0px 10px 1px #000000;
 }
 
 .btn-secondary:hover {
-    color: #c6c7cd;
+    color: #c6c7cd !important;
     background-color: #5B3174 !important;
     border-color: #0e0f11 !important;
     box-shadow: 0px 0px 1px 1px #000000;
@@ -244,7 +246,7 @@ label
 
 .shadow-inset 
 {
-    box-shadow: 0px 0px 50px 10px #000000; !important;
+    box-shadow: 0px 0px 50px 10px #000000 !important;
 }
 
 .input-group-text 
@@ -283,9 +285,22 @@ label
     /*background-color:aliceblue;*/
     height: 400px;
 }
-#first_name, #last_name, #reg_login, #reg_password
+#first_name, #last_name, #reg_login, #reg_password, #name, #phone, #email, #editName, #editPhone, #editEmail
 {
     color: #E8B045;
+    background-color: #2B1E32;
+    border-color: #0e0f11;
+    border-width: 0.1rem;
+    /*changes shape of input*/
+    /*border-radius: 5rem*/
+    
+}
+#first_name:hover, #last_name:hover, #reg_login:hover, #reg_password:hover, #name:hover, #phone:hover, #email:hover, #editName:hover, #editPhone:hover, #editEmail:hover
+{
+    color: #E8B045;
+    background-color: #2B1E32;
+    border-color: #0e0f11;
+    box-shadow: 0px 0px 10px 1px #000000;
 }
 .modal
 {
@@ -298,13 +313,14 @@ label
 }
 .modal-header
 {      /* not necessary but imo important for user */
-    background-color: #5B3174; !important;
+    background-color: #5B3174 !important;
     cursor: move;
+    color: #E8B045 !important;
 }
 
 .modal-footer
 {      /* not necessary but imo important for user */
-    background-color: #5B3174; !important;
+    background-color: #5B3174 !important;
 }
 
 #spinner 
@@ -372,6 +388,9 @@ ion-icon {
 #properties {
     color: #E8B045;
     background-color: #5B3174;
+    border-color: #0e0f11 !important;
+    box-shadow: 0px 0px 10px 1px #000000;
+    border-radius: 0.55rem;
 }
 
 #properties:hover{
