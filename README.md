@@ -1,12 +1,8 @@
 # Group3
 Contacts app.
 
-TODO:
+WIP:
 
-PHP 
+CSS styling.
 
-Javascript
-
-CSS
-
-HTML
+Add Contact not showing up immediately in list. 
