@@ -17,14 +17,12 @@ function doSearch()
     let jsonPayload = JSON.stringify(tmp);
 
     let url = urlBase + '/Search.' + extension;
-    console.log(tmp);
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
     try {
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                console.log(xhr.responseText + "bruh mmnt extravaganza");
                 let jsObjectArr = JSON.parse(xhr.responseText);
 
                 display_contacts(jsObjectArr.searchResult);
@@ -43,8 +41,6 @@ function display_contacts(contactList){
 
     let my_table = document.getElementById("contact_display_box");
     
-    console.log("there should be " + contactList.length + " rows");
-
     for (let i = 0; i < contactList.length; i++) {
         let my_row = my_table.insertRow(i);
         let cell_one = my_row.insertCell(0);

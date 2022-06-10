@@ -41,8 +41,8 @@ function cancelEdit()
 
     let user_Id = info.data; //gets contact's id
 
-    alert("row " + row + " - column" + info.parentNode.cellIndex);
-    alert("name: " + contactName + " phone: " + contactPhone + " email: " + contactEmail);
+    //alert("row " + row + " - column" + info.parentNode.cellIndex);
+    //alert("name: " + contactName + " phone: " + contactPhone + " email: " + contactEmail);
 
 
     // alert("name in row: " + my_table.rows[info.parentNode.parentNode.rowIndex].cells[0].innerHTML);

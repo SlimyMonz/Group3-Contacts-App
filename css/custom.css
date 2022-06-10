@@ -15,6 +15,10 @@ label
  color: white;
 }
 
+.modalLabel {
+ color: white;
+ margin-top: 1em; 
+}
 
 #navbar{
     min-width: 100%;
@@ -241,8 +245,6 @@ label
     background-clip: text;
 	-webkit-text-fill-color: transparent;
     font-size: 4rem;
-    
-
 }
 .customRow
 {
@@ -275,21 +277,19 @@ label
 #spinner 
 { visibility:hidden; } 
 
-table{
-    width: 100%;
-    padding-left: 30px;
-    margin-right: auto;
-
-}
-
 #contact_title{
     font-size: 2.5rem;
 }
 
+table, tr {
+    width: 100%;
+}
+
 .table_button_class{
-    width: 5%;
+    text-align: center;
+    width: 6.5%;
     font-size: 1rem;
-    
+    border: 1px solid black;
 }
 
 .table_button_class:hover{
@@ -299,7 +299,23 @@ table{
 
 .table_data{
     font-size: 1.5rem;
-    width: 30%
+    width: 29%;
+    border: 1px solid black;
+    padding-left: 1%;
+}
+
+.table_header{
+    font-size: 1.5rem;
+    width: 29%;
+    border: 1px solid black;
+    padding-left: 1%;
+}
+
+.table_header_button{
+    text-align: center;
+    font-size: 1.5rem;
+    width: 6.5%;
+    border: 1px solid black;
 }
 
 #logo{

@@ -44,6 +44,7 @@
 
 
         <!-- tested and this worked when called from onclick= edit button in search.js -->
+        <!-- 
         <script> 
             function showDetails(info) {
               let contact_ID = info.id;
@@ -52,9 +53,10 @@
               alert("The id of the contact is " + contactoo + ".");
             }
             </script>
+        -->
     </head>
 
-    <body onload="doSearch();">
+    <body>
 
         <div id="navbar" style="width: 100%;">
 
@@ -62,13 +64,13 @@
                 <h1 class="h4" id="logo">Monster Contacts</h1>
                 <div style="float:right; padding-right: 30px;">
                     <button type="button" id="add_contact" class="btn btn-primary my-2 my-sm-0"  data-bs-target="#exampleModal" data-bs-toggle="modal" >Add Contact</button>
-                    <button type="button" id="logout" class="btn btn-primary my-2 my-sm-0" onclick="logout()">logout</button>
+                    <button type="button" id="logout" class="btn btn-primary my-2 my-sm-0" onclick="logout()">Logout</button>
                 </div>
             </div>
 
         
             <form class="my-2 my-lg-0 form-group" style="display:inline-block; width: 100%;">
-                <select name="properties" id="properties">
+                <select style="height:30px" name="properties" id="properties">
                     <option value="Name">Name</option>
                     <option value="Phone">Phone</option>
                     <option value="Email">Email</option>
@@ -84,11 +86,11 @@
             <div>
                 <table>
                     <tr>
-                        <td class="table_data">Name</td>
-                        <td class="table_data">Phone </td>
-                        <td class="table_data">E-Mail </td>
-                        <td class="table_button_class"></td>
-                        <td class="table_button_class"></td>
+                        <th class="table_header">Name</td>
+                        <th class="table_header">Phone </td>
+                        <th class="table_header">E-Mail </td>
+                        <th class="table_header_button">Edit</td>
+                        <th class="table_header_button">Delete</td>
                     </tr>
                 </table>
 
@@ -103,18 +105,22 @@
             <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bg-green border-dark">
-                <h5 class="modal-title" id="exampleModalLabel">Add Contact</h5>
+                <h5 style="color:white" class="modal-title" id="exampleModalLabel">Add Contact</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body bg-green">
-                <input type="text" class = "form-control w-50" id="name" onfocus="this.placeholder=''"  onblur="this.placeholder = 'Name'" placeholder = "Name" value="">
-                <input type="text" class = "form-control w-50" id="phone" onfocus="this.placeholder=''" onblur="this.placeholder = 'Phone'" placeholder = "Phone" value="">
-                <input type="text" class = "form-control w-50" id="email" onfocus="this.placeholder=''" onblur="this.placeholder = 'E-Mail'" placeholder = "E-Mail" value="">      
-
+                    <form>
+                    <label class="modalLabel" for="editName">Name:</label>
+                    <input type="text" class = "form-control w-50" id="name" onfocus="this.placeholder=''"  onblur="this.placeholder = 'Name'" placeholder = "Name" value="">
+                    <label class="modalLabel" for="editName">Phone:</label>
+                    <input type="text" class = "form-control w-50" id="phone" onfocus="this.placeholder=''" onblur="this.placeholder = 'Phone'" placeholder = "Phone" value="">
+                    <label class="modalLabel" for="editName">E-Mail:</label>
+                    <input type="text" class = "form-control w-50" id="email" onfocus="this.placeholder=''" onblur="this.placeholder = 'E-Mail'" placeholder = "E-Mail" value="">      
+                    </form>
                 </div>
                 <div class="modal-footer bg-pink border-dark">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="addContact();" data-bs-dismiss="modal" >Add Contact</button>
+                    <button type="button" class="btn btn-primary" onclick="addContact();" data-bs-dismiss="modal" >Add Contact</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
             </div>
@@ -124,19 +130,23 @@
             <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bg-green border-dark">
-                <h5 class="modal-title" id="getModalLabel">Edit Contact</h5>
+                <h5 style="color:white" class="modal-title" id="getModalLabel">Edit Contact</h5>
                 </div>
                 <div class="modal-body bg-green">
-                <input type="text" class = "form-control w-50" id="editName" onfocus="this.placeholder=''" onblur="this.placeholder='Name'" placeholder="Name" value="">
-                <input type="text" class = "form-control w-50" id="editPhone" onfocus="this.placeholder=''" onblur="this.placeholder='Phone'" placeholder="Phone" value="">
-                <input type="text" class = "form-control w-50" id="editEmail" onfocus="this.placeholder=''" placeholder="E-Mail" onblur="this.placeholder='E-Mail'" value="">      
-
+                    <form>
+                    <label class="modalLabel" for="editName">Name:</label>
+                    <input type="text" class = "form-control w-50" id="editName" onfocus="this.placeholder=''" onblur="this.placeholder='Name'" placeholder="Name" value="">
+                    <label class="modalLabel" for="editPhone">Phone:</label>
+                    <input type="text" class = "form-control w-50" id="editPhone" onfocus="this.placeholder=''" onblur="this.placeholder='Phone'" placeholder="Phone" value="">
+                    <label class="modalLabel" for="editEmail">E-Mail:</label>
+                    <input type="text" class = "form-control w-50" id="editEmail" onfocus="this.placeholder=''" placeholder="E-Mail" onblur="this.placeholder='E-Mail'" value="">  
+                    </form>   
                 </div>
                 <div class="modal-footer bg-pink border-dark"> 
                 <!--cancelEdit() only called upon close, not edit. data-bs-dismiss not being in cancel is not a mistake-->
                 <!--this is because I needed a way to determine if the modal was closing because of a cancel or an actual submit-->
-                <button type="button" class="btn btn-secondary" onclick="cancelEdit();" >Close</button>
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal" >Edit Contact</button>
+                <button type="button" class="btn btn-secondary" onclick="cancelEdit();" >Cancel</button>
                 </div>
             </div>
             </div>
@@ -160,6 +170,10 @@
                     event.preventDefault();
                     document.getElementById("search_btn").click();
                 }
+            });
+
+            $(".modal").on("hidden.bs.modal", function(){
+                $(this).find("form").trigger("reset");
             });
         </script>
 
