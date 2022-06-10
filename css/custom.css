@@ -285,7 +285,7 @@ label
     /*background-color:aliceblue;*/
     height: 400px;
 }
-#first_name, #last_name, #reg_login, #reg_password, #name, #phone, #email
+#first_name, #last_name, #reg_login, #reg_password, #name, #phone, #email, #editName, #editPhone, #editEmail
 {
     color: #E8B045;
     background-color: #2B1E32;
@@ -295,7 +295,7 @@ label
     /*border-radius: 5rem*/
     
 }
-#first_name:hover, #last_name:hover, #reg_login:hover, #reg_password:hover, #name:hover, #phone:hover, #email:hover
+#first_name:hover, #last_name:hover, #reg_login:hover, #reg_password:hover, #name:hover, #phone:hover, #email:hover, #editName:hover, #editPhone:hover, #editEmail:hover
 {
     color: #E8B045;
     background-color: #2B1E32;
