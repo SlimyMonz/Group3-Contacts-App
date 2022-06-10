@@ -66,10 +66,6 @@ function display_contacts(contactList){
         //not quite working yet concept for filling in the edit modal with original contacts data
         //alert(my_table.row.item(0).cells.item(0).innerHTML);
         
-       
-        
-        
-        //showDetails is a function actually located in contact.html fyi
 
         //editContact() located in update.js
         cell_four.innerHTML = "<div id=\"table_edit\" data-index=\"\" onclick=\"editContact(this);\"><ion-icon name=\"create-outline\"></ion-icon></div>";
