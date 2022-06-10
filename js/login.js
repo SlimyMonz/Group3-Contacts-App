@@ -55,6 +55,12 @@ function doRegister()
     let contactLogin = $("#reg_login").val();
     let contactPassword = $("#reg_password").val();
 
+    //doesn't actually prevent it yet, just making sure it worked at checking
+    if (contactfirstName === '' || contactlastName === '' || contactLogin === '' || contactPassword === '')
+    {
+        alert('no');
+    };
+
     let newUser = {
         firstName: contactfirstName,
         lastName: contactlastName,

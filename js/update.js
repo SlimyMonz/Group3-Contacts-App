@@ -31,9 +31,14 @@ function cancelEdit()
 
  async function editContact(info)
 {
+    //gets our table and the row # from which we clicked edit
+    let my_table = document.getElementById("contact_display_box");
+    let row = info.parentNode.parentNode.rowIndex;
+
 
     let my_table = document.getElementById("contact_display_box");
     let row = info.parentNode.parentNode.rowIndex;
+
 
     let contactName = my_table.rows[row].cells[0].innerHTML;
     let contactPhone = my_table.rows[row].cells[1].innerHTML;

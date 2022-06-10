@@ -28,7 +28,9 @@ function deleteContact(info)
                 {
                     // repaint page
                     //doSearch();
+
                     let row = info.parentNode.parentNode.rowIndex;
+
                     document.getElementById("contact_display_box").deleteRow(row);
                 }
             };
