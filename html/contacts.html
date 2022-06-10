@@ -44,7 +44,6 @@
 
 
         <!-- tested and this worked when called from onclick= edit button in search.js -->
-        <!-- 
         <script> 
             function showDetails(info) {
               let contact_ID = info.id;
@@ -53,7 +52,6 @@
               alert("The id of the contact is " + contactoo + ".");
             }
             </script>
-        -->
     </head>
 
     <body>
@@ -109,7 +107,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body bg-green">
-                    <form>
+                    <form id="addForm">
                     <label class="modalLabel" for="editName">Name:</label>
                     <input type="text" class = "form-control w-50" id="name" onfocus="this.placeholder=''"  onblur="this.placeholder = 'Name'" placeholder = "Name" value="">
                     <label class="modalLabel" for="editName">Phone:</label>
@@ -173,7 +171,7 @@
             });
 
             $(".modal").on("hidden.bs.modal", function(){
-                $(this).find("form").trigger("reset");
+                $(this).find("form[id='addForm']").trigger("reset");
             });
 
 
