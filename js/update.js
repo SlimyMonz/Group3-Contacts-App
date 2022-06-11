@@ -35,11 +35,6 @@ function cancelEdit()
     let my_table = document.getElementById("contact_display_box");
     let row = info.parentNode.parentNode.rowIndex;
 
-
-    let my_table = document.getElementById("contact_display_box");
-    let row = info.parentNode.parentNode.rowIndex;
-
-
     let contactName = my_table.rows[row].cells[0].innerHTML;
     let contactPhone = my_table.rows[row].cells[1].innerHTML;
     let contactEmail = my_table.rows[row].cells[2].innerHTML;

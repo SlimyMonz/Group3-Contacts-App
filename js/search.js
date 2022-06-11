@@ -84,7 +84,23 @@ function display_contacts(contactList){
         //alert(my_table.rows[0].cells[0].innerHTML);
 
     }
-
     
+    }
+
+function testPopulate()
+{
+    alert("uh oh we startin' the party");
+
+    for (let i = 0; i < 100; i++) 
+    {
+       
+        let result = Math.random().toString(36).substring(2,7);
+        let result2 = Math.random().toString(36).substring(2,10);
+        let result3 = Math.random().toString(36).substring(2, 12);
+        alert("name: " + result + " phone: " + result2 + " email: " + result3);
+        massAddContact(result, result2, result3);
+
+    }
 }
+ 
 

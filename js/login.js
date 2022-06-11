@@ -8,12 +8,13 @@ function doLogin()
 
     let login = document.getElementById("loginName").value;
     let password = document.getElementById("loginPassword").value;
-//	var hash = md5( password );
+    var hash = md5( password );
 
     document.getElementById("loginResult").innerHTML = "";
+    document.getElementById("registerResult").innerHTML = "";
 
-    let tmp = {login: login, password: password};
-//	var tmp = {login:login,password:hash};
+    //let tmp = {login: login, password: password};
+    var tmp = {login: login, password: hash};
     let jsonPayload = JSON.stringify(tmp);
 
     let url = urlBase + '/Login.' + extension;
@@ -55,36 +56,45 @@ function doRegister()
     let contactLogin = $("#reg_login").val();
     let contactPassword = $("#reg_password").val();
 
+    document.getElementById("registerResult").innerHTML = "";
+    document.getElementById("loginResult").innerHTML = "";
+
+    var hash = md5( contactPassword );
+
     //doesn't actually prevent it yet, just making sure it worked at checking
     if (contactfirstName === '' || contactlastName === '' || contactLogin === '' || contactPassword === '')
     {
-        alert('no');
-    };
+        document.getElementById("registerResult").innerHTML = "Please input in all fields to register";
+        return;
+    }
+    else
+    {
 
-    let newUser = {
-        firstName: contactfirstName,
-        lastName: contactlastName,
-        login: contactLogin,
-        password: contactPassword
-
-    };
-
-    let jsonPayload = JSON.stringify(newUser);
-
-    let url = urlBase + '/Register.' + extension;
-
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
-    try {
-        xhr.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                //document.getElementById("colorAddResult").innerHTML = "Color has been added";
-            }
+        var newUser = {
+            firstName: contactfirstName,
+            lastName: contactlastName,
+            login: contactLogin,
+            password: hash
         };
-        xhr.send(jsonPayload);
-    } catch (err) {
-        //document.getElementById("colorAddResult").innerHTML = err.message;
+    
+        let jsonPayload = JSON.stringify(newUser);
+    
+        let url = urlBase + '/Register.' + extension;
+    
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+        try {
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    //document.getElementById("colorAddResult").innerHTML = "Color has been added";
+                }
+            };
+            xhr.send(jsonPayload);
+        } catch (err) {
+            //document.getElementById("colorAddResult").innerHTML = err.message;
+        }
+
     }
 
 }

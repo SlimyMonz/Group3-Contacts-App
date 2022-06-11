@@ -341,8 +341,9 @@ table, tr {
     border: 1px solid black;
 }
 
+
 .table_button_class:hover{
-    color: #c6c7cd;
+    color: #c6c7cd !important;
     
 }
 
@@ -351,7 +352,22 @@ table, tr {
     width: 29%;
     border: 1px solid black;
     padding-left: 1%;
+    color: #E8B045 !important;
 }
+
+/*table bootstrap stuff*/
+.table td, .table  th
+{
+    color: #E8B045 !important;
+    word-break: break-word;
+}
+
+.table-bordered td, .table-bordered th 
+{
+    border: 3px solid black !important;
+}
+/*table bootstrap stuff end*/
+
 
 .table_header{
     font-size: 1.5rem;

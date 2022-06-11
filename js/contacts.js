@@ -36,6 +36,45 @@ function addContact()
         //document.getElementById("colorAddResult").innerHTML = err.message;
     }
 }
+function massAddContact(addName, addPhone, addEmail)
+{
+    let contactName = addName;
+    let contactPhone = addPhone;
+    let contactEmail = addEmail;
+    //alert(" againname: " + contactName + " phone: " + contactPhone + " email: " + contactEmail + "id: " + userId);
+
+
+    let newContact = {
+        name: contactName,
+        phone: contactPhone,
+        email: contactEmail,
+        userId: userId
+    };
+
+    let jsonPayload = JSON.stringify( newContact );
+
+    let url = urlBase + '/Add.' + extension;
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+    try
+    {
+        xhr.onreadystatechange = function()
+        {
+            if (this.readyState == 4 && this.status == 200)
+            {
+                //alert("here?");
+                //document.getElementById("colorAddResult").innerHTML = "Color has been added";
+            }
+        };
+        xhr.send(jsonPayload);
+    }
+    catch(err)
+    {
+        //document.getElementById("colorAddResult").innerHTML = err.message;
+    }
+}
 
 
 
