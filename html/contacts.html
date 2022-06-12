@@ -52,7 +52,7 @@
               alert("The unique id of the button is " + contact_ID + ".");
               alert("The id of the contact is " + contactoo + ".");
             }
-            </script>
+        </script>
     </head>
 
     <body>
@@ -82,6 +82,7 @@
         
         <div id="main_content">
             <h2 id="contact_title" style="margin-bottom: 1.5rem;" >Contacts</h2>
+            
             <div class = "table-responsive">
                 <table class="table table-bordered" id ="contact_display_header" style="table-layout: fixed; width: 100%;">
                     <tr>  
@@ -92,6 +93,11 @@
                         <td class="table_header_button">Delete</td>
                     </tr> 
                 </table>
+
+                <h3 id="recently_added_title" style="display: none;">Recently Added</h3>
+                <div>
+                    <table class="table table-bordered" id ="recently_added" style="table-layout: fixed; width: 100%;"></table>
+                </div>
 
                 <!-- display tabole here via search.js -->
                 <table class="table table-bordered" id ="contact_display_box" style="table-layout: fixed; width: 100%;"></table>

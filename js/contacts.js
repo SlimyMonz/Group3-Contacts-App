@@ -35,7 +35,47 @@ function addContact()
     {
         //document.getElementById("colorAddResult").innerHTML = err.message;
     }
+
+    // display in recently added
+    let title_element = document.getElementById("recently_added_title");
+    title_element.style.display = "block";
+    
+
+    let recently_added = document.getElementById("recently_added");
+
+    recently_added_arr.push(newContact);
+
+    for (let i = 0; i < recently_added_arr.length; i++) 
+    {
+        console.log("made it into for loop");
+         let my_row = recently_added.insertRow(i);
+         let cell_one = my_row.insertCell(0);
+         let cell_two = my_row.insertCell(1);
+         let cell_three = my_row.insertCell(2);
+         let cell_four = my_row.insertCell(3);
+         let cell_five = my_row.insertCell(4);
+ 
+         cell_one.classList.add("table_data");
+         cell_two.classList.add("table_data");
+         cell_three.classList.add("table_data");
+         cell_four.classList.add("table_button_class");
+         cell_five.classList.add("table_button_class");
+         
+         cell_one.innerHTML = recently_added_arr[i].name;
+         cell_two.innerHTML = recently_added_arr[i].phone;
+         cell_three.innerHTML = recently_added_arr[i].email;
+ 
+ 
+ 
+         //editContact() located in update.js
+         cell_four.innerHTML = "<div id=\"table_edit\" data-index=\"\" ;\"><ion-icon name=\"create-outline\"></ion-icon></div>";
+ 
+         //didn't get to test this because fileZilla was acting whack
+         cell_five.innerHTML = "<div id=\"table_delete\" data-index=\"\"> <ion-icon name=\"trash-outline\"></ion-icon></div>";
+    }
 }
+
+
 function massAddContact(addName, addPhone, addEmail)
 {
     let contactName = addName;
@@ -73,7 +113,7 @@ function massAddContact(addName, addPhone, addEmail)
     catch(err)
     {
         //document.getElementById("colorAddResult").innerHTML = err.message;
-    }
+    }    
 }
 
 

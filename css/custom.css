@@ -418,3 +418,7 @@ ion-icon {
     color: #E8B045;
     background-color: #5B3174;
 }
+
+#recently_added_title{
+    display: none;
+}
