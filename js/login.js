@@ -88,6 +88,7 @@ function doRegister()
             xhr.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     //document.getElementById("colorAddResult").innerHTML = "Color has been added";
+                    document.getElementById("registerSuccess").innerHTML = "Registration Successful!";
                 }
             };
             xhr.send(jsonPayload);

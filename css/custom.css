@@ -19,7 +19,7 @@ label
  color: #E8B045;
  margin-top: 1em; 
 }
-#registerResult, #loginResult
+#registerResult, #loginResult, #registerSuccess
 {
     color: white;
     text-align: left;
@@ -310,6 +310,10 @@ label
     background-color: #2B1E32;
     border-color: #0e0f11;
     box-shadow: 0px 0px 10px 1px #000000;
+}
+#loginName:focus, #loginPassword:focus
+{
+    color: #E8B045;
 }
 .modal
 {
