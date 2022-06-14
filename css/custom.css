@@ -200,6 +200,11 @@ label
     color:#E8B045;
 }
 
+.btn-close
+{
+    background-color: #E8B045 !important;
+}
+
 .btn:hover {
     color: #c6c7cd;
     text-decoration: none;
@@ -310,6 +315,18 @@ label
 {
     overflow: hidden;
 }
+
+.modal-content
+{
+    border-radius: 2.5px !important;
+    border-color: #E8B045 !important;
+}
+
+.modal-body
+{
+    background-color: #5B3174 !important;
+}
+
 .modal-dialog
 {
     margin-right: 50;
@@ -317,14 +334,14 @@ label
 }
 .modal-header
 {      /* not necessary but imo important for user */
-    background-color: #5B3174 !important;
+    background-color: #2B1E32 !important;
     cursor: move;
     color: #E8B045 !important;
 }
 
 .modal-footer
 {      /* not necessary but imo important for user */
-    background-color: #5B3174 !important;
+    background-color: #2B1E32 !important;
 }
 
 #spinner 
@@ -374,7 +391,7 @@ table, tr {
 
 
 .table_header{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 29%;
     border: 1px solid black;
     padding-left: 1%;
@@ -382,7 +399,7 @@ table, tr {
 
 .table_header_button{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 6.5%;
     border: 1px solid black;
 }
