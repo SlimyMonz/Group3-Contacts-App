@@ -37,42 +37,18 @@ function addContact()
     }
 
     // display in recently added
-    let title_element = document.getElementById("recently_added_title");
-    title_element.style.display = "block";
-    
+    let temp0 = document.getElementById("recently_added_name");
+    temp0.innerHTML = newContact.name;
 
-    let recently_added = document.getElementById("recently_added");
+    let temp1 =document.getElementById("recently_added_phone");
+    temp1.innerHTML = newContact.phone;
 
-    recently_added_arr.push(newContact);
+    let temp2 = document.getElementById("recently_added_email");
+    temp2.innerHTML = newContact.email;
 
-    for (let i = 0; i < recently_added_arr.length; i++) 
-    {
-        console.log("made it into for loop");
-         let my_row = recently_added.insertRow(i);
-         let cell_one = my_row.insertCell(0);
-         let cell_two = my_row.insertCell(1);
-         let cell_three = my_row.insertCell(2);
-         let cell_four = my_row.insertCell(3);
-         let cell_five = my_row.insertCell(4);
- 
-         cell_one.classList.add("table_data");
-         cell_two.classList.add("table_data");
-         cell_three.classList.add("table_data");
-         cell_four.classList.add("table_button_class");
-         cell_five.classList.add("table_button_class");
-         
-         cell_one.innerHTML = recently_added_arr[i].name;
-         cell_two.innerHTML = recently_added_arr[i].phone;
-         cell_three.innerHTML = recently_added_arr[i].email;
- 
- 
- 
-         //editContact() located in update.js
-         cell_four.innerHTML = "<div id=\"table_edit\" data-index=\"\" ;\"><ion-icon name=\"create-outline\"></ion-icon></div>";
- 
-         //didn't get to test this because fileZilla was acting whack
-         cell_five.innerHTML = "<div id=\"table_delete\" data-index=\"\"> <ion-icon name=\"trash-outline\"></ion-icon></div>";
-    }
+    let title_element = document.getElementById("recently_added_container");
+    title_element.style = "display: block;";
+
 }
 
 

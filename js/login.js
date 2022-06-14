@@ -29,7 +29,7 @@ function doLogin()
                 userId = jsonObject.id;
 
                 if (userId < 1) {
-                    document.getElementById("loginResult").innerHTML = "User/Password combination incorrect";
+                    document.getElementById("loginResult").innerHTML = "User/Password combination incorrect!";
                     return;
                 }
 
@@ -64,7 +64,7 @@ function doRegister()
     //doesn't actually prevent it yet, just making sure it worked at checking
     if (contactfirstName === '' || contactlastName === '' || contactLogin === '' || contactPassword === '')
     {
-        document.getElementById("registerResult").innerHTML = "Please input in all fields to register";
+        document.getElementById("registerResult").innerHTML = "Please fill out all fields to register!";
         return;
     }
     else
@@ -88,6 +88,7 @@ function doRegister()
             xhr.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     //document.getElementById("colorAddResult").innerHTML = "Color has been added";
+                    document.getElementById("registerSuccess").innerHTML = "Registration Successful!";
                 }
             };
             xhr.send(jsonPayload);

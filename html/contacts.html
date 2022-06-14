@@ -19,7 +19,7 @@
 
         <!--Group Code-->
         <script src="/js/app.js"></script>
-        <script src="js/md5.js"></script>
+        <script src="/js/md5.js"></script>
         <script src="/js/update.js"></script>
         <script src="/js/delete.js"></script>
         <script src="/js/contacts.js"></script>
@@ -69,7 +69,7 @@
 
         
             <form class="my-2 my-lg-0 form-group" style="display:inline-block; width: 100%;">
-                <select style="height:30px" name="properties" id="properties">
+                <select style="height:30px;" name="properties" id="properties">
                     <option value="Name">Name</option>
                     <option value="Phone">Phone</option>
                     <option value="Email">Email</option>
@@ -81,10 +81,27 @@
         </div>
         
         <div id="main_content">
-            <h2 id="contact_title" style="margin-bottom: 1.5rem;" >Contacts</h2>
+
+            <h2 id="contact_title">Contacts</h2>
+
+            <div id="recently_added_container" class="table-responsive" style="display: none;">
+                <h3 style="padding-top: 30px; font-size: 1rem; color: white;">Recently Added</h3>
+                <table class="table table-bordered" style="table-layout: fixed; width: 100%;">
+                    <tr>
+                        <td id="recently_added_name" class="recent_added_cell"></td>
+                        <td id="recently_added_phone" class="recent_added_cell"></td>
+                        <td id="recently_added_email" class="recent_added_cell"></td>
+                    </tr>
+                </table>
+            </div>
+
             
             <div class = "table-responsive">
-                <table class="table table-bordered" id ="contact_display_header" style="table-layout: fixed; width: 100%;">
+
+                <!-- display table here via search.js -->
+                <h3 id="seach_heading" style="padding-top: 30px; font-size: 1rem;"></h3>
+               
+                <table class="table table-bordered" id ="contact_display_header" style="table-layout: fixed; width: 100%; padding-bottom: 10px;">
                     <tr>  
                         <td class="table_header">Name</td>
                         <td class="table_header">Phone </td>
@@ -94,14 +111,7 @@
                     </tr> 
                 </table>
 
-                <h3 id="recently_added_title" style="display: none;">Recently Added</h3>
-                <div>
-                    <table class="table table-bordered" id ="recently_added" style="table-layout: fixed; width: 100%;"></table>
-                </div>
-
-                <!-- display tabole here via search.js -->
                 <table class="table table-bordered" id ="contact_display_box" style="table-layout: fixed; width: 100%;"></table>
-               
             </div>
             
         </div> 
@@ -111,7 +121,7 @@
             <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bg-green border-dark">
-                <h5 style="color:white" class="modal-title" id="exampleModalLabel">Add Contact</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Add Contact</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body bg-green">
@@ -125,7 +135,7 @@
                     </form>
                 </div>
                 <div class="modal-footer bg-pink border-dark">
-                    <button type="button" class="btn btn-primary" onclick="addContact();" data-bs-dismiss="modal" >Add Contact</button>
+                    <button type="button" class="btn btn-primary" onclick="addContact();" data-bs-dismiss="modal" >Submit</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -136,7 +146,7 @@
             <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bg-green border-dark">
-                <h5 style="color:white" class="modal-title" id="getModalLabel">Edit Contact</h5>
+                <h5 class="modal-title" id="getModalLabel">Edit Contact</h5>
                 </div>
                 <div class="modal-body bg-green">
                     <form>
@@ -151,7 +161,7 @@
                 <div class="modal-footer bg-pink border-dark"> 
                 <!--cancelEdit() only called upon close, not edit. data-bs-dismiss not being in cancel is not a mistake-->
                 <!--this is because I needed a way to determine if the modal was closing because of a cancel or an actual submit-->
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" >Edit Contact</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" >Submit</button>
                 <button type="button" class="btn btn-secondary" onclick="cancelEdit();" >Cancel</button>
                 </div>
             </div>

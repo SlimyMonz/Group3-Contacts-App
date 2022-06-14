@@ -1,6 +1,6 @@
 function deleteContact(info) 
 {
-    if (confirm("Are you sure you want to delete this contact FOREVER?!") == true) 
+    if (confirm("Are you sure you want to delete this contact?") == true) 
     {
         //grab contact ID and save to an object
         let contacto = info.data;
@@ -40,14 +40,11 @@ function deleteContact(info)
         {
             //document.getElementById("colorAddResult").innerHTML = err.message;
         }
-        //reset contacts?
-        //doSearch();
-
-        //
+        
     } 
     else 
     {
-        text = "You canceled!";
+        text = "Canceled";
         return;
     }
     
