@@ -48,8 +48,7 @@ function addContact()
 
     let title_element = document.getElementById("recently_added_container");
     title_element.style = "display: block;";
-    
-    
+
 }
 
 

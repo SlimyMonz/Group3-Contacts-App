@@ -45,6 +45,11 @@ label
     margin-right: 7px;
 }
 
+.mb-4
+{
+    color: #FFFFFF;
+}
+
 #createAccount:hover
 {
     color: #c6c7cd;
@@ -53,7 +58,9 @@ label
 
 #register
 {
+
     color: white;
+
     font-weight: bold;
     
 }
@@ -83,7 +90,7 @@ label
 {
     background-color: #5B3174;
     border-color: #0e0f11;
-    color: #E8B045;
+    color: #E8B045 !important;
     box-shadow: 0px 0px 10px 1px #000000;
     
 }
@@ -103,7 +110,7 @@ label
 }
 #search_btn:focus
 {
-    color: #c6c7cd;
+    color: #E8B045;
     background-color: #2B1E32;
     border-color: #0e0f11;
     
@@ -186,7 +193,7 @@ label
     opacity: 1;
 }
 .form-control:focus {
-    color: #c6c7cd;
+    color: #E8B045;
     background-color: #2B1E32;
     border-color: #0e0f11;
     box-shadow: 0px 0px 10px 1px #000000;
@@ -300,9 +307,6 @@ label
     background-color: #2B1E32;
     border-color: #0e0f11;
     border-width: 0.1rem;
-    /*changes shape of input*/
-    /*border-radius: 5rem*/
-    
 }
 #first_name:hover, #last_name:hover, #reg_login:hover, #reg_password:hover, #name:hover, #phone:hover, #email:hover, #editName:hover, #editPhone:hover, #editEmail:hover
 {
@@ -311,10 +315,12 @@ label
     border-color: #0e0f11;
     box-shadow: 0px 0px 10px 1px #000000;
 }
+
 #loginName:focus, #loginPassword:focus
 {
     color: #E8B045;
 }
+
 .modal
 {
     overflow: hidden;
@@ -329,6 +335,7 @@ label
 .modal-body
 {
     background-color: #5B3174 !important;
+
 }
 
 .modal-dialog
@@ -447,8 +454,10 @@ ion-icon {
     display: none;
 }
 
+
 .recent_added_cell{
     color: white !important;
     font-size: large !important;
 
 }
+
