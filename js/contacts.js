@@ -35,7 +35,24 @@ function addContact()
     {
         //document.getElementById("colorAddResult").innerHTML = err.message;
     }
+
+    // display in recently added
+    let temp0 = document.getElementById("recently_added_name");
+    temp0.innerHTML = newContact.name;
+
+    let temp1 =document.getElementById("recently_added_phone");
+    temp1.innerHTML = newContact.phone;
+
+    let temp2 = document.getElementById("recently_added_email");
+    temp2.innerHTML = newContact.email;
+
+    let title_element = document.getElementById("recently_added_container");
+    title_element.style = "display: block;";
+    
+    
 }
+
+
 function massAddContact(addName, addPhone, addEmail)
 {
     let contactName = addName;
@@ -73,7 +90,7 @@ function massAddContact(addName, addPhone, addEmail)
     catch(err)
     {
         //document.getElementById("colorAddResult").innerHTML = err.message;
-    }
+    }    
 }
 
 

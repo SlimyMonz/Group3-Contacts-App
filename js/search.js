@@ -25,8 +25,10 @@ function doSearch()
             if (this.readyState == 4 && this.status == 200) {
                 let jsObjectArr = JSON.parse(xhr.responseText);
 
-                display_contacts(jsObjectArr.searchResult);
+                recently_added_arr = [];
 
+                //display search results
+                display_contacts(jsObjectArr.searchResult, srch);
             }
         };
         xhr.send(jsonPayload);
@@ -36,10 +38,19 @@ function doSearch()
 
 }
 
+// controller for list display
+function display_contacts(contactList, srch){
 
-function display_contacts(contactList){
+     // remove recently added
+     let recently_added_container = document.getElementById("recently_added_container");
+     recently_added_container.style = "display: none;";
+
+     // add header for search results
+     let search_description_h2 = document.getElementById("seach_heading"); 
+     search_description_h2.innerHTML = "Search result from \"" +  srch + "\" :";
 
     let my_table = document.getElementById("contact_display_box");
+
     
     for (let i = 0; i < contactList.length; i++) {
         let my_row = my_table.insertRow(i);

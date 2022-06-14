@@ -3,13 +3,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;    
-    /* background-color: #18634B; */
 }
 
 html {
     scroll-behavior: smooth;
     background-color:  #2B1E32;
 }
+
 label
 {
  color: #E8B045;
@@ -19,7 +19,11 @@ label
  color: #E8B045;
  margin-top: 1em; 
 }
-
+#registerResult, #loginResult
+{
+    color: white;
+    text-align: left;
+}
 
 #navbar{
     min-width: 100%;
@@ -49,11 +53,11 @@ label
 
 #register
 {
-    color:#000000;
+    color: white;
     font-weight: bold;
     
 }
-#add_contact, #logout  /* "color" changes text in button's color, "background-color" changes color of button*/
+#add_contact, #logout  
 {
     
     background-color: #2B1E32;
@@ -70,6 +74,7 @@ label
     box-shadow: 0px 0px 1px 1px #000000;
 
 }
+
 #create:hover
 {
     color: #bdadb7;
@@ -177,7 +182,7 @@ label
 }
 .form-control::placeholder  
 {
-    color: #5B3174;
+    color: #5B3174 !important;
     opacity: 1;
 }
 .form-control:focus {
@@ -189,7 +194,6 @@ label
 .btn 
 {
     color:  #5B3174;
-       
 }
 .btn-success
 {
@@ -327,7 +331,7 @@ label
 { visibility:hidden; } 
 
 #contact_title{
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 table, tr {
@@ -356,15 +360,15 @@ table, tr {
 }
 
 /*table bootstrap stuff*/
-.table td, .table  th
+.table td
 {
-    color: #E8B045 !important;
+    color: #E8B045;
     word-break: break-word;
 }
 
 .table-bordered td, .table-bordered th 
 {
-    border: 3px solid black !important;
+    border: 2px solid black !important;
 }
 /*table bootstrap stuff end*/
 
@@ -378,7 +382,7 @@ table, tr {
 
 .table_header_button{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     width: 6.5%;
     border: 1px solid black;
 }
@@ -390,8 +394,7 @@ table, tr {
 
 #main_content{
     width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 50px;
     height: auto;
     background-color: #5B3174;
     color: #E8B045;
@@ -417,4 +420,14 @@ ion-icon {
 #properties:active{
     color: #E8B045;
     background-color: #5B3174;
+}
+
+#recently_added_title{
+    display: none;
+}
+
+.recent_added_cell{
+    color: white !important;
+    font-size: large !important;
+
 }
